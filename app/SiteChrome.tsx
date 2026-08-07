@@ -1,3 +1,14 @@
+"use client";
+
+import type { MouseEvent } from "react";
+import { ArrowIcon } from "./ArrowIcon";
+
+function closeMobileMenu(event: MouseEvent<HTMLDivElement>) {
+  if (!(event.target as HTMLElement).closest("a")) return;
+  const menu = event.currentTarget.closest("details");
+  if (menu instanceof HTMLDetailsElement) menu.open = false;
+}
+
 export function SiteHeader() {
   const root = "/plohospal-production";
   return (
@@ -12,7 +23,7 @@ export function SiteHeader() {
       <a className="nav-cta" href={`${root}/#contact`}>Обсудить проект <ArrowIcon /></a>
       <details className="mobile-menu">
         <summary aria-label="Открыть меню"><span></span><span></span></summary>
-        <div><a href={`${root}/`}>Главная</a><a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты <ArrowIcon /></a><span className="mobile-menu-label">Разделы сайта</span><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div>
+        <div onClick={closeMobileMenu}><a href={`${root}/`}>Главная</a><a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты <ArrowIcon /></a><span className="mobile-menu-label">Разделы сайта</span><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div>
       </details>
     </header>
   );
@@ -32,4 +43,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-import { ArrowIcon } from "./ArrowIcon";
