@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent, type PointerEvent } from "react";
+import { ArrowIcon } from "./ArrowIcon";
 import { SiteFooter, SiteHeader } from "./SiteChrome";
 
 const tickerText = "PLOHOSPAL PRODUCTION";
@@ -88,7 +89,7 @@ export default function Home() {
         </h1>
         <div className="hero-bottom">
           <p>Строим медиаприсутствие,<br/>которое невозможно игнорировать.</p>
-          <a className="round-link" href="#about" aria-label="Узнать больше">↓</a>
+          <a className="round-link" href="#about" aria-label="Узнать больше"><ArrowIcon direction="down" /></a>
           <p className="hero-side">Стратегия · Контент<br/>Продвижение · AI</p>
         </div>
         <div className="ticker" aria-hidden="true">
@@ -118,15 +119,15 @@ export default function Home() {
       </section>
 
       <section className="services section">
-        <div className="section-label-row"><div className="eyebrow">[ Направления ]</div><a className="text-link" href={`${root}/directions/`}>Все направления ↗</a></div>
+        <div className="section-label-row"><div className="eyebrow">[ Направления ]</div><a className="text-link" href={`${root}/directions/`}>Все направления <ArrowIcon /></a></div>
         <div className="service-list">
           {services.map((service) => {
             const isOpen = openService === service.num;
             return <article className={isOpen ? "is-open" : ""} key={service.num}>
               <button className="service-toggle" type="button" aria-expanded={isOpen} onClick={() => setOpenService(isOpen ? null : service.num)}>
-                <span>{service.num}</span><h3>{service.title}</h3><p>{service.text}</p><b>↗</b>
+                <span>{service.num}</span><h3>{service.title}</h3><p>{service.text}</p><b><ArrowIcon /></b>
               </button>
-              <div className="service-expand"><div><p>{service.result}</p><a href="#contact">Обсудить задачу ↗</a></div></div>
+              <div className="service-expand"><div><p>{service.result}</p><a href="#contact">Обсудить задачу <ArrowIcon /></a></div></div>
             </article>;
           })}
         </div>
@@ -138,14 +139,14 @@ export default function Home() {
           <div className="eyebrow">[ Манифест ]</div>
           <blockquote>«Бренд — это не логотип. Это то, как вас чувствуют»</blockquote>
           <p>Мы сами — наш главный кейс. Всё, что предлагаем клиентам, делаем для себя первыми. Создаём истории, которые остаются — от поста до полнометражного кино.</p>
-          <a className="dark-link" href={`${root}/manifesto/`}>Читать манифест ↗</a>
+          <a className="dark-link" href={`${root}/manifesto/`}>Читать манифест <ArrowIcon /></a>
         </div>
       </section>
 
       <section className="formats section" id="formats">
         <div className="section-head"><div className="eyebrow">[ Форматы сотрудничества ]</div><h2>Подключаемся<br/>на нужном масштабе</h2></div>
         <div className="format-grid">
-          {formats.map(([title, forWhom, desc], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Получить предложение ↗</a></article>)}
+          {formats.map(([title, forWhom, desc], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Получить предложение <ArrowIcon /></a></article>)}
         </div>
         <p className="note">Точные условия — индивидуально после брифинга.</p>
       </section>
@@ -158,7 +159,7 @@ export default function Home() {
             <small>0{quizIndex + 1} / 0{quizSteps.length}</small>
             <h2>{quizSteps[quizIndex].question}</h2>
             <div className="quiz-options">
-              {quizSteps[quizIndex].options.map(([value, label]) => <button key={value} type="button" onClick={() => chooseQuizAnswer(quizSteps[quizIndex].key, value)}>{label}<span>↗</span></button>)}
+              {quizSteps[quizIndex].options.map(([value, label]) => <button key={value} type="button" onClick={() => chooseQuizAnswer(quizSteps[quizIndex].key, value)}>{label}<ArrowIcon /></button>)}
             </div>
           </> : <div className="quiz-result">
             <div className="eyebrow">[ Ваш старт ]</div><p>Вам подойдёт формат</p><h2>{recommendedFormat}</h2><p className="quiz-result-copy">Соберём понятный первый шаг и подготовим предложение под вашу задачу.</p><button className="quiz-reset" type="button" onClick={() => { setQuizIndex(0); setQuizAnswers({}); setLeadBrief(""); }}>Пройти ещё раз</button>
@@ -168,7 +169,7 @@ export default function Home() {
               <label>Коротко о задаче<textarea name="task" required placeholder="Что хотите изменить или запустить?" rows={1}/></label>
               <label className="consent-field"><input name="consent" type="checkbox" required/><span>Даю согласие на обработку персональных данных согласно <a href={`${root}/privacy/`} target="_blank" rel="noreferrer">Политике обработки персональных данных</a>.</span></label>
               <p className="lead-form-note">После нажатия откроется Telegram, а текст брифа будет скопирован в буфер. Сообщение отправляете вы сами.</p>
-              <button type="submit">Получить персональную стратегию ↗</button>
+              <button type="submit">Получить персональную стратегию <ArrowIcon /></button>
             </form>
             {leadBrief && <div className="lead-confirmation"><b>Бриф скопирован.</b><span>Telegram открыт — вставьте текст в сообщение и отправьте его.</span><button type="button" onClick={() => navigator.clipboard?.writeText(leadBrief)}>Скопировать ещё раз</button></div>}
           </div>}
@@ -180,7 +181,7 @@ export default function Home() {
         <p className="team-lead">Стратеги, маркетологи, сценаристы и AI-специалисты, объединённые одной целью — создавать медиаприсутствие, которое работает.</p>
         <div className="team-grid">
           {team.map((person) => <article key={person.name}>
-            <div className="team-photo" onPointerMove={tiltTeamCard} onPointerLeave={resetTeamTilt}><img src={person.image} alt={person.name}/><span>↗</span></div>
+            <div className="team-photo" onPointerMove={tiltTeamCard} onPointerLeave={resetTeamTilt}><img src={person.image} alt={person.name}/><span><ArrowIcon /></span></div>
             <h3>{person.name}</h3><p>{person.role}</p>
             <div className="socials">{person.links.map(([label, url]) => <a key={label} href={url} target="_blank" rel="noreferrer">{label}</a>)}</div>
           </article>)}
@@ -193,7 +194,7 @@ export default function Home() {
           <details><summary>С какими нишами вы работаете?<span>+</span></summary><p>С бизнесом любого масштаба — от личного бренда и локального проекта до крупной компании.</p></details>
           <details><summary>Можно начать с одной задачи?<span>+</span></summary><p>Да. Начнём с аудита и приоритетной задачи, а затем соберём систему вокруг измеримого результата.</p></details>
           <details><summary>Что происходит после заявки?<span>+</span></summary><p>Связываемся в течение 24 часов, проводим короткий бриф и предлагаем персональную стратегию.</p></details>
-          <a className="text-link faq-more" href={`${root}/faq/`}>Все вопросы и ответы ↗</a>
+          <a className="text-link faq-more" href={`${root}/faq/`}>Все вопросы и ответы <ArrowIcon /></a>
         </div></div>
       </section>
       <SiteFooter/>

@@ -9,10 +9,10 @@ export function SiteHeader() {
         <a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты</a>
         <details className="desktop-more"><summary>Ещё <span>+</span></summary><div><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div></details>
       </nav>
-      <a className="nav-cta" href={`${root}/#contact`}>Обсудить проект ↗</a>
+      <a className="nav-cta" href={`${root}/#contact`}>Обсудить проект <ArrowIcon /></a>
       <details className="mobile-menu">
         <summary aria-label="Открыть меню"><span></span><span></span></summary>
-        <div><a href={`${root}/`}>Главная</a><a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты ↗</a><span className="mobile-menu-label">Разделы сайта</span><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div>
+        <div><a href={`${root}/`}>Главная</a><a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты <ArrowIcon /></a><span className="mobile-menu-label">Разделы сайта</span><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div>
       </details>
     </header>
   );
@@ -22,7 +22,7 @@ export function SiteFooter() {
   return (
     <footer id="contact">
       <div className="footer-top"><div className="eyebrow">[ Контакты ]</div><p>Есть проект?</p></div>
-      <h2>ДАВАЙТЕ<br/><span>СДЕЛАЕМ</span> ↗</h2>
+      <h2>ДАВАЙТЕ<br/><span>СДЕЛАЕМ</span> <ArrowIcon /></h2>
       <div className="footer-grid">
         <p>Первая консультация и персональная стратегия медиаприсутствия — бесплатно.</p>
         <div><small>Социальные сети</small><a href="https://t.me/bimperv" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.instagram.com/bimperv" target="_blank" rel="noreferrer">Instagram</a><a href="https://vk.com/bimperv" target="_blank" rel="noreferrer">ВКонтакте</a></div>
@@ -32,3 +32,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+import { ArrowIcon } from "./ArrowIcon";
