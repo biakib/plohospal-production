@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = { title: "FAQ — PLOHOSPAL PRODUCTION", description: "Ответы о стоимости, сроках, форматах сотрудничества и AI-аватарах." };
 
 const questions = [

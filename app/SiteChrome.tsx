@@ -1,17 +1,18 @@
 export function SiteHeader() {
+  const root = "/plohospal-production";
   return (
     <header className="nav-wrap">
-      <a className="logo" href="/" aria-label="PLOHOSPAL Production — главная">
-        <img src="/assets/plohospal-logo-dark.png" alt="PLOHOSPAL PRODUCTION" />
+      <a className="logo" href={`${root}/`} aria-label="PLOHOSPAL Production — главная">
+        <img src={`${root}/assets/plohospal-logo-dark.png`} alt="PLOHOSPAL PRODUCTION" />
       </a>
       <nav aria-label="Основная навигация">
-        <a href="/#about">Про нас</a><a href="/#formats">Форматы</a><a href="/#team">Команда</a><a href="/#contact">Контакты</a>
-        <details className="desktop-more"><summary>Ещё <span>+</span></summary><div><a href="/directions">Направления</a><a href="/manifesto">Манифест</a><a href="/faq">FAQ</a></div></details>
+        <a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты</a>
+        <details className="desktop-more"><summary>Ещё <span>+</span></summary><div><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div></details>
       </nav>
-      <a className="nav-cta" href="/#contact">Обсудить проект ↗</a>
+      <a className="nav-cta" href={`${root}/#contact`}>Обсудить проект ↗</a>
       <details className="mobile-menu">
         <summary aria-label="Открыть меню"><span></span><span></span></summary>
-        <div><a href="/">Главная</a><a href="/#about">Про нас</a><a href="/#formats">Форматы</a><a href="/#team">Команда</a><a href="/#contact">Контакты ↗</a><span className="mobile-menu-label">Разделы сайта</span><a href="/directions">Направления</a><a href="/manifesto">Манифест</a><a href="/faq">FAQ</a></div>
+        <div><a href={`${root}/`}>Главная</a><a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты ↗</a><span className="mobile-menu-label">Разделы сайта</span><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div>
       </details>
     </header>
   );

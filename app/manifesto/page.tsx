@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = { title: "Манифест — PLOHOSPAL PRODUCTION", description: "Во что мы верим: честный взгляд на медиа, бизнес, истории и технологии." };
 
 const paragraphs = [
@@ -19,7 +21,7 @@ export default function ManifestoPage() {
     <section className="page-hero manifesto-hero"><div className="eyebrow">[ 02 — Манифест ]</div><h1>ВО ЧТО<br/><span>МЫ ВЕРИМ</span></h1><p>Не список услуг и не корпоративные формулировки. Честный, прямой взгляд на медиа, бизнес и технологии.</p></section>
     <section className="manifesto-intro section"><p>Мы не догоняем изменения.<br/><em>Мы двигаемся вместе с ними</em> — и помогаем вашему бренду делать то же самое.</p></section>
     <section className="manifesto-lines section">{paragraphs.map(([number,title,text])=><article className="manifesto-line" key={number}><span>{number}</span><h2>{title}</h2><p>{text}</p></article>)}</section>
-    <section className="manifesto-end"><p>Добро пожаловать</p><h2>НА ПОРОГ<br/>НОВОГО.</h2><a href="/#contact">Начать проект ↗</a></section>
+    <section className="manifesto-end"><p>Добро пожаловать</p><h2>НА ПОРОГ<br/>НОВОГО.</h2><a href="/plohospal-production/#contact">Начать проект ↗</a></section>
     <SiteFooter/>
   </main>;
 }
