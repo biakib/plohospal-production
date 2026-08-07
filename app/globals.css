@@ -368,7 +368,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .faq-list summary b { font-size:16px; }
   .faq-list details>p { margin:0 0 28px 44px; font-size:15px; }
   .privacy-page { padding-top:115px; }
-  .privacy-page h1 { margin:35px 0 55px; font-size:14vw; }
+  .privacy-page h1 { max-width:100%; margin:35px 0 55px; font-size:clamp(42px,10vw,52px); line-height:.94; letter-spacing:-.075em; overflow-wrap:anywhere; }
   .privacy-grid { grid-template-columns:1fr; gap:30px; padding-bottom:70px; }
   .motion-ready .reveal-item { transform:translateY(22px); }
 }
