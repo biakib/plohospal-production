@@ -166,6 +166,8 @@ export default function Home() {
               <label>Как вас зовут?<input name="name" required placeholder="Имя"/></label>
               <label>Как с вами связаться?<input name="contact" required placeholder="Telegram, телефон или почта"/></label>
               <label>Коротко о задаче<textarea name="task" required placeholder="Что хотите изменить или запустить?" rows={1}/></label>
+              <label className="consent-field"><input name="consent" type="checkbox" required/><span>Даю согласие на обработку персональных данных согласно <a href={`${root}/privacy/`} target="_blank" rel="noreferrer">Политике обработки персональных данных</a>.</span></label>
+              <p className="lead-form-note">После нажатия откроется Telegram, а текст брифа будет скопирован в буфер. Сообщение отправляете вы сами.</p>
               <button type="submit">Получить персональную стратегию ↗</button>
             </form>
             {leadBrief && <div className="lead-confirmation"><b>Бриф скопирован.</b><span>Telegram открыт — вставьте текст в сообщение и отправьте его.</span><button type="button" onClick={() => navigator.clipboard?.writeText(leadBrief)}>Скопировать ещё раз</button></div>}

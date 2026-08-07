@@ -28,7 +28,7 @@ export function SiteFooter() {
         <div><small>Социальные сети</small><a href="https://t.me/bimperv" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.instagram.com/bimperv" target="_blank" rel="noreferrer">Instagram</a><a href="https://vk.com/bimperv" target="_blank" rel="noreferrer">ВКонтакте</a></div>
         <div><small>Связаться напрямую</small><a href="tel:+79026399815">+7 902 639-98-15</a><a href="mailto:Bimperv@yandex.ru">Bimperv@yandex.ru</a></div>
       </div>
-      <div className="copyright"><span>© PLOHOSPAL PRODUCTION, 2026</span><a href="#top">Наверх ↑</a></div>
+      <div className="copyright"><span>© PLOHOSPAL PRODUCTION, 2026</span><a href="/plohospal-production/privacy/">Политика обработки данных</a><a href="#top">Наверх ↑</a></div>
     </footer>
   );
 }
