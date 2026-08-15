@@ -64,8 +64,8 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .statement { margin:32px 0 80px auto; max-width:900px; font-size:clamp(28px,3.5vw,52px); line-height:1.1; letter-spacing:-.04em; font-weight:700; }
 .statement em { font-family:var(--font-editorial); font-weight:500; }
 .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:5vw; align-items:center; }
-.portrait { height:560px; filter:grayscale(1); overflow:visible; background:#1a1a1a; border-radius:12px; display:grid; place-items:center; }
-.portrait img { object-fit:contain; object-position:center; border-radius:12px; }
+.portrait { filter:grayscale(1); border-radius:12px; overflow:hidden; }
+.portrait img { object-fit:cover; object-position:center; width:100%; height:auto; }
 .intro-copy h2 { margin:0 0 28px; font-size:clamp(28px,3vw,44px); line-height:1.05; letter-spacing:-.04em; }
 .section-head h2,.faq h2 { margin:0 0 42px; font-size:clamp(44px,5vw,72px); line-height:.95; letter-spacing:-.055em; }
 .intro-copy p { max-width:520px; font-size:18px; line-height:1.6; }
@@ -272,7 +272,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .hero h1 .outline-word { margin-left:0; }
   .statement { margin-bottom:48px; }
   .intro-grid,.manifesto,.faq-grid { grid-template-columns:1fr; }
-  .portrait { height:520px; }
+  .portrait { border-radius:0; }
   .numbers { grid-template-columns:1fr; }
   .numbers div { min-height:210px; }
   .manifesto-art { min-height:600px; }
@@ -315,7 +315,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .round-link { width:54px; height:54px; }
   .ticker { margin-left:-20px; }
   .statement { font-size:34px; line-height:1.02; letter-spacing:-.06em; }
-  .portrait { height:auto; aspect-ratio:4/3; border-radius:0; margin-left:-20px; margin-right:-20px; width:calc(100% + 40px); }
+  .portrait { margin-left:-20px; margin-right:-20px; width:calc(100% + 40px); border-radius:0; }
   .intro-copy { padding:20px 0 0; }
   .service-toggle { gap:10px; }
   .service-list h3 { font-size:34px; }
