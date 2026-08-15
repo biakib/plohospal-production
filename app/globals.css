@@ -270,7 +270,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .hero h1 .outline-word { margin-left:0; }
   .statement { margin-bottom:48px; }
   .intro-grid,.manifesto,.faq-grid { grid-template-columns:1fr; }
-  .portrait { height:520px; }
+  .portrait { height:520px; border-radius:0; }
   .numbers { grid-template-columns:1fr; }
   .numbers div { min-height:210px; }
   .manifesto-art { min-height:600px; }
@@ -313,7 +313,9 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .round-link { width:54px; height:54px; }
   .ticker { margin-left:-20px; }
   .statement { font-size:34px; line-height:1.02; letter-spacing:-.06em; }
-  .portrait { height:430px; }
+  .portrait { height:auto; aspect-ratio:4/3; border-radius:0; }
+  .intro-grid { gap:0; }
+  .intro { padding-left:0; padding-right:0; }
   .intro-copy { padding-top:20px; }
   .service-toggle { gap:10px; }
   .service-list h3 { font-size:34px; }
