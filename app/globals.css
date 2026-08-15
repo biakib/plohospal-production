@@ -63,6 +63,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .statement em { font-family:var(--font-editorial); font-weight:500; }
 .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:5vw; align-items:center; }
 .portrait { height:560px; filter:grayscale(1); overflow:hidden; border-radius:12px; }
+.portrait img { object-fit:contain; object-position:center; }
 .intro-copy h2 { margin:0 0 28px; font-size:clamp(28px,3vw,44px); line-height:1.05; letter-spacing:-.04em; }
 .section-head h2,.faq h2 { margin:0 0 42px; font-size:clamp(44px,5vw,72px); line-height:.95; letter-spacing:-.055em; }
 .intro-copy p { max-width:520px; font-size:18px; line-height:1.6; }
