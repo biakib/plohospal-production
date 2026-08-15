@@ -270,7 +270,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .hero h1 .outline-word { margin-left:0; }
   .statement { margin-bottom:48px; }
   .intro-grid,.manifesto,.faq-grid { grid-template-columns:1fr; }
-  .portrait { height:520px; border-radius:0; }
+  .portrait { height:520px; }
   .numbers { grid-template-columns:1fr; }
   .numbers div { min-height:210px; }
   .manifesto-art { min-height:600px; }
