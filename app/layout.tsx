@@ -16,10 +16,10 @@ const title = "PLOHOSPAL PRODUCTION — медиа-агентство новог
 const description = "Стратегия, контент, продвижение и AI-продакшн для брендов, которые невозможно игнорировать.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://biakib.github.io/plohospal-production/"),
+  metadataBase: new URL("https://plohospal.ru"),
   title,
   description,
-  icons: { icon: "/plohospal-production/favicon.svg" },
+  icons: { icon: "/favicon.svg" },
   openGraph: { title, description, type: "website", locale: "ru_RU", images: [{ url: "/og.png", width: 1600, height: 837, alt: "PLOHOSPAL PRODUCTION" }] },
   twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
 };

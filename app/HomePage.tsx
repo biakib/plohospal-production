@@ -5,7 +5,7 @@ import { ArrowIcon } from "./ArrowIcon";
 import { SiteFooter, SiteHeader } from "./SiteChrome";
 
 const tickerText = "PLOHOSPAL PRODUCTION";
-const root = "/plohospal-production";
+const root = "";
 
 const services = [
   { num: "01", title: "Стратегия", text: "Позиционирование, медиастратегия и понятный маршрут роста бренда.", result: "На выходе — ясный фокус, тон коммуникации и план первых действий." },
