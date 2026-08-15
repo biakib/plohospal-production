@@ -1,2 +1,2 @@
-:HL["/plohospal-production/_next/static/chunks/01tw4pa0cu1oh.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"manifesto","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"qUo4xrdvuOOiVXXyV50s4"}
+:HL["/plohospal-production/_next/static/chunks/0ll_b5uj4mffj.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"manifesto","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"GEc1fxqrwofqhyzSsbQe2"}

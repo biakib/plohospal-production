@@ -18,7 +18,7 @@ export function SiteHeader() {
       </a>
       <nav aria-label="Основная навигация">
         <a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты</a>
-        <details className="desktop-more"><summary>Ещё <span>+</span></summary><div><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div></details>
+        <div className="desktop-more"><button type="button" className="desktop-more-trigger">Ещё <span>+</span></button><div><a href={`${root}/directions/`}>Направления</a><a href={`${root}/manifesto/`}>Манифест</a><a href={`${root}/faq/`}>FAQ</a></div></div>
       </nav>
       <a className="nav-cta" href={`${root}/#contact`}>Обсудить проект <ArrowIcon /></a>
       <details className="mobile-menu">
