@@ -103,7 +103,7 @@ export default function Home() {
         <div className="eyebrow">[ Про нас ]</div>
         <p className="statement">Мы берём бизнес и создаём для него <em>сильную подачу</em> в медиапространстве — от стратегии и визуального образа до контента, рекламы и цифровых амбассадоров.</p>
         <div className="intro-grid">
-          <div className="portrait"><img src={`${root}/assets/about.jpeg`} alt="Команда PLOHOSPAL Production за работой"/></div>
+          <div className="portrait"><img src={`${root}/assets/about.png`} alt="Команда PLOHOSPAL Production за работой"/></div>
           <div className="intro-copy">
             <h2>Не точечные услуги.<br/>Система, которая работает.</h2>
             <p>Для каждого клиента — свой продукт. Мы изучаем бизнес, находим точки роста и предлагаем именно то, что даст результат.</p>
