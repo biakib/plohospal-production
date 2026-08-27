@@ -118,7 +118,7 @@ export default function Home() {
         <div className="eyebrow">[ Про нас ]</div>
         <p className="statement">Мы берём бизнес и создаём для него <em>сильную подачу</em> в медиапространстве — от стратегии и визуального образа до контента, рекламы и цифровых амбассадоров.</p>
         <div className="intro-grid">
-          <div className="portrait"><img src={`${root}/assets/about.png`} alt="Команда PLOHOSPAL Production за работой"/></div>
+          <div className="portrait"><img src={`${root}/assets/about.png`} alt="Команда PLOHOSPAL Production за работой" loading="lazy" decoding="async"/></div>
           <div className="intro-copy">
             <h2>Не точечные услуги.<br/>Система, которая работает.</h2>
             <p>Для каждого клиента — свой продукт. Мы изучаем бизнес, находим точки роста и предлагаем именно то, что даст результат.</p>
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       <section className="manifesto section">
-        <div className="manifesto-art"><img src={`${root}/assets/manifesto.png`} alt="Креативный образ PLOHOSPAL Production"/></div>
+        <div className="manifesto-art"><img src={`${root}/assets/manifesto.png`} alt="Креативный образ PLOHOSPAL Production" loading="lazy" decoding="async"/></div>
         <div className="manifesto-copy">
           <div className="eyebrow">[ Манифест ]</div>
           <blockquote>«Бренд — это не логотип. Это то, как вас чувствуют»</blockquote>
@@ -196,7 +196,7 @@ export default function Home() {
         <p className="team-lead">Стратеги, маркетологи, сценаристы и AI-специалисты, объединённые одной целью — создавать медиаприсутствие, которое работает.</p>
         <div className="team-grid">
           {team.map((person) => <article key={person.name}>
-            <div className="team-photo" onPointerMove={tiltTeamCard} onPointerLeave={resetTeamTilt}><img src={person.image} alt={person.name}/><span><ArrowIcon /></span></div>
+            <div className="team-photo" onPointerMove={tiltTeamCard} onPointerLeave={resetTeamTilt}><img src={person.image} alt={person.name} loading="lazy" decoding="async"/><span><ArrowIcon /></span></div>
             <h3>{person.name}</h3><p>{person.role}</p>
             <div className="socials">{person.links.map(([label, url]) => <a key={label} href={url} target="_blank" rel="noreferrer">{label}</a>)}</div>
           </article>)}

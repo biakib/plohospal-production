@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
 
 export const dynamic = "force-static";
+
+export const metadata: Metadata = { title: "Политика обработки данных — PLOHOSPAL PRODUCTION", description: "Как PLOHOSPAL Production обрабатывает и защищает персональные данные пользователей сайта.", robots: { index: false } };
 
 export default function PrivacyPage() {
   return <main id="top">
