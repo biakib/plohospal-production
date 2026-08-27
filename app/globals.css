@@ -82,7 +82,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .service-list { margin-top:70px; border-top:1px solid var(--line); }
 .service-list article { border-bottom:1px solid var(--line); transition:background .25s,color .25s; }
 .service-toggle { width:100%; display:grid; grid-template-columns:120px 1fr 1fr 40px; align-items:center; gap:30px; padding:34px 0; border:0; background:transparent; color:inherit; font:inherit; text-align:left; cursor:pointer; transition:padding .25s,background .25s,color .25s; }
-.service-toggle > span { font-family:var(--font-display); font-size:clamp(44px,4.5vw,66px); font-weight:700; line-height:.8; letter-spacing:-.03em; color:rgba(241,240,235,.15); transition:color .25s; }
+.service-toggle > span { font-family:var(--font-body); font-size:clamp(44px,4.5vw,66px); font-weight:800; line-height:.8; letter-spacing:-.04em; color:rgba(241,240,235,.15); transition:color .25s; }
 .service-list article:hover .service-toggle > span,.service-list article.is-open .service-toggle > span { color:rgba(0,0,0,.2); }
 .service-list article:hover .service-toggle,.service-list article.is-open .service-toggle { padding-left:20px; background:var(--lime); color:#000; }
 .service-list h3 { margin:0; font-size:46px; letter-spacing:-.04em; }
@@ -109,7 +109,7 @@ blockquote { margin:auto 0 60px; font:italic 500 clamp(54px,6.4vw,100px)/.88 var
 .formats { background:var(--white); color:#0b0b0b; }
 .format-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid #aaa; border-left:1px solid #aaa; }
 .format-grid article { min-height:370px; padding:34px; border-right:1px solid #aaa; border-bottom:1px solid #aaa; display:flex; flex-direction:column; }
-.format-grid article > span { font-family:var(--font-display); font-size:clamp(56px,6vw,88px); font-weight:700; line-height:.8; letter-spacing:-.03em; color:rgba(11,11,11,.1); transition:color .25s; }
+.format-grid article > span { font-family:var(--font-body); font-size:clamp(56px,6vw,88px); font-weight:800; line-height:.8; letter-spacing:-.04em; color:rgba(11,11,11,.1); transition:color .25s; }
 .format-grid article:hover > span { color:rgba(11,11,11,.18); }
 .format-grid h3 { margin:34px 0 5px; font-size:52px; text-transform:uppercase; letter-spacing:-.05em; }
 .format-grid small { text-transform:uppercase; letter-spacing:.08em; }
