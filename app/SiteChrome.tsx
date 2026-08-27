@@ -32,7 +32,7 @@ export function SiteHeader() {
   return (
     <header className="nav-wrap">
       <a className="logo" href={`${root}/`} aria-label="PLOHOSPAL Production — главная">
-        <img src={`${root}/assets/plohospal-logo-dark.png`} alt="PLOHOSPAL PRODUCTION" />
+        <img src={`${root}/assets/plohospal-logo-dark.webp`} alt="PLOHOSPAL PRODUCTION" />
       </a>
       <nav aria-label="Основная навигация">
         <a href={`${root}/#about`}>Про нас</a><a href={`${root}/#formats`}>Форматы</a><a href={`${root}/#team`}>Команда</a><a href={`${root}/#contact`}>Контакты</a>

@@ -30,13 +30,13 @@ const formats = [
 ];
 
 const team = [
-  { name: "Илья Бушманов", role: "Основатель-идеолог", image: `${root}/assets/ilya-bushmanov-new.png`, links: [["ВК", "https://vk.com/bimperv"], ["TG", "https://t.me/bimperv"], ["IG", "https://www.instagram.com/bimperv"]] },
-  { name: "Иван Егоров", role: "Креативный директор", image: `${root}/assets/ivan-egorov-new.png`, links: [["ВК", "https://vk.com/vanzep"], ["TG", "https://t.me/vanzep"], ["IG", "https://www.instagram.com/ivanegorov"]] },
-  { name: "Денис Круглов", role: "Сценарист, оператор, режиссёр", image: `${root}/assets/denis-kruglov-new.png`, links: [["ВК", "https://vk.ru/motherfackers1"], ["IG", "https://www.instagram.com/kds_video_prod"]] },
-  { name: "Артур Рякин", role: "Продюсер проектов", image: `${root}/assets/artur-ryakin.png`, links: [["ВК", "https://vk.ru/honeykut"]] },
-  { name: "Илья Кузьмицкий", role: "Специалист по внедрению ИИ-технологий и обучению нейросетям", image: `${root}/assets/ilya-kuzmitsky.png`, links: [["ВК", "https://vk.ru/neuro_ilya"], ["TG", "https://t.me/Neuro_Ilya"]] },
-  { name: "Лиона Филь", role: "Руководитель направления актёрского и ораторского мастерства", image: `${root}/assets/liona-fil-portrait-v2.png`, links: [["ВК", "https://vk.com/lionkas"], ["TG", "https://t.me/lionaelle"], ["IG", "https://www.instagram.com/lionaelle"]] },
-  { name: "Юлия Гирш", role: "Специалист по AI и SMM", image: `${root}/assets/yulia-girsh-new.png`, links: [["ВК", "https://vk.com/id138925509"], ["TG", "https://t.me/@girshjuli"], ["IG", "https://www.instagram.com/juli_girsh"]] },
+  { name: "Илья Бушманов", role: "Основатель-идеолог", image: `${root}/assets/ilya-bushmanov-new.webp`, links: [["ВК", "https://vk.com/bimperv"], ["TG", "https://t.me/bimperv"], ["IG", "https://www.instagram.com/bimperv"]] },
+  { name: "Иван Егоров", role: "Креативный директор", image: `${root}/assets/ivan-egorov-new.webp`, links: [["ВК", "https://vk.com/vanzep"], ["TG", "https://t.me/vanzep"], ["IG", "https://www.instagram.com/ivanegorov"]] },
+  { name: "Денис Круглов", role: "Сценарист, оператор, режиссёр", image: `${root}/assets/denis-kruglov-new.webp`, links: [["ВК", "https://vk.ru/motherfackers1"], ["IG", "https://www.instagram.com/kds_video_prod"]] },
+  { name: "Артур Рякин", role: "Продюсер проектов", image: `${root}/assets/artur-ryakin.webp`, links: [["ВК", "https://vk.ru/honeykut"]] },
+  { name: "Илья Кузьмицкий", role: "Специалист по внедрению ИИ-технологий и обучению нейросетям", image: `${root}/assets/ilya-kuzmitsky.webp`, links: [["ВК", "https://vk.ru/neuro_ilya"], ["TG", "https://t.me/Neuro_Ilya"]] },
+  { name: "Лиона Филь", role: "Руководитель направления актёрского и ораторского мастерства", image: `${root}/assets/liona-fil-portrait-v2.webp`, links: [["ВК", "https://vk.com/lionkas"], ["TG", "https://t.me/lionaelle"], ["IG", "https://www.instagram.com/lionaelle"]] },
+  { name: "Юлия Гирш", role: "Специалист по AI и SMM", image: `${root}/assets/yulia-girsh-new.webp`, links: [["ВК", "https://vk.com/id138925509"], ["TG", "https://t.me/@girshjuli"], ["IG", "https://www.instagram.com/juli_girsh"]] },
 ];
 
 export default function Home() {
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="eyebrow">[ Про нас ]</div>
         <p className="statement">Мы берём бизнес и создаём для него <em>сильную подачу</em> в медиапространстве — от стратегии и визуального образа до контента, рекламы и цифровых амбассадоров.</p>
         <div className="intro-grid">
-          <div className="portrait"><img src={`${root}/assets/about.png`} alt="Команда PLOHOSPAL Production за работой" loading="lazy" decoding="async"/></div>
+          <div className="portrait"><img src={`${root}/assets/about.webp`} alt="Команда PLOHOSPAL Production за работой" loading="lazy" decoding="async"/></div>
           <div className="intro-copy">
             <h2>Не точечные услуги.<br/>Система, которая работает.</h2>
             <p>Для каждого клиента — свой продукт. Мы изучаем бизнес, находим точки роста и предлагаем именно то, что даст результат.</p>
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       <section className="manifesto section">
-        <div className="manifesto-art"><img src={`${root}/assets/manifesto.png`} alt="Креативный образ PLOHOSPAL Production" loading="lazy" decoding="async"/></div>
+        <div className="manifesto-art"><img src={`${root}/assets/manifesto.webp`} alt="Креативный образ PLOHOSPAL Production" loading="lazy" decoding="async"/></div>
         <div className="manifesto-copy">
           <div className="eyebrow">[ Манифест ]</div>
           <blockquote>«Бренд — это не логотип. Это то, как вас чувствуют»</blockquote>
