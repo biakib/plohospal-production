@@ -1,9 +1,9 @@
 "use client";
 
-import type { MouseEvent } from "react";
+import { useEffect, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowIcon } from "./ArrowIcon";
 
-function closeMobileMenu(event: MouseEvent<HTMLDivElement>) {
+function closeMobileMenu(event: ReactMouseEvent<HTMLDivElement>) {
   if (!(event.target as HTMLElement).closest("a")) return;
   const menu = event.currentTarget.closest("details");
   if (menu instanceof HTMLDetailsElement) menu.open = false;
@@ -11,6 +11,24 @@ function closeMobileMenu(event: MouseEvent<HTMLDivElement>) {
 
 export function SiteHeader() {
   const root = "";
+
+  useEffect(() => {
+    function handleAnchorClick(event: MouseEvent) {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const anchor = (event.target as HTMLElement).closest?.("a[href]");
+      if (!(anchor instanceof HTMLAnchorElement)) return;
+      const target = new URL(anchor.href, window.location.href);
+      const hash = target.hash.slice(1);
+      if (!hash || target.pathname !== "/" || window.location.pathname !== "/") return;
+      const element = document.getElementById(hash);
+      if (!element) return;
+      event.preventDefault();
+      element.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", `/#${hash}`);
+    }
+    document.addEventListener("click", handleAnchorClick);
+    return () => document.removeEventListener("click", handleAnchorClick);
+  }, []);
   return (
     <header className="nav-wrap">
       <a className="logo" href={`${root}/`} aria-label="PLOHOSPAL Production — главная">

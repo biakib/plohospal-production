@@ -93,7 +93,7 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main id="top">
       <SiteHeader/>
 
       <section className="hero" id="top">
