@@ -23,9 +23,9 @@ const quizSteps = [
 ] as const;
 
 const formats = [
-  ["Старт", "Для малого бизнеса и личных брендов", "Упаковка, стратегия и базовый контент-план."],
-  ["Бизнес", "Для растущих команд", "Полный цикл: брендинг, контент, SMM и продвижение."],
-  ["Корпорация", "Для крупного бизнеса", "Комплексная медиастратегия, AI-инструменты и работа на год вперёд."],
+  ["Старт", "Для малого бизнеса и личных брендов", "Упаковка бренда, стратегия и первый контент-план — быстрый выход в медиапространство."],
+  ["Бизнес", "Для растущих команд", "Полный цикл: упаковка бренда, SMM и контент, продакшн и продвижение."],
+  ["Корпорация", "Для крупного бизнеса", "Комплексная медиастратегия, AI-контент и внедрение ИИ — работа на год вперёд."],
   ["Партнёрство", "Для агентств и инвесторов", "Совместные проекты, white-label и долгосрочное сотрудничество."],
 ];
 
@@ -45,7 +45,20 @@ export default function Home() {
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
   const [leadBrief, setLeadBrief] = useState("");
   const quizDone = quizIndex === quizSteps.length;
-  const recommendedFormat = quizAnswers.scale === "large" ? "Корпорация" : quizAnswers.goal === "campaign" || quizAnswers.scale === "grow" ? "Бизнес" : "Старт";
+  const recommendedFormat =
+    quizAnswers.scale === "large" ? "Корпорация"
+    : quizAnswers.scale === "grow" || quizAnswers.goal === "campaign" || quizAnswers.pace === "steady" ? "Бизнес"
+    : "Старт";
+  const recommendationReason =
+    recommendedFormat === "Корпорация"
+      ? "У вас большая команда — нужна комплексная стратегия, AI-инструменты и работа на год вперёд."
+      : recommendedFormat === "Бизнес"
+        ? quizAnswers.goal === "campaign"
+          ? "Вы запускаете кампанию — подключим полный цикл: контент, SMM и продвижение."
+          : quizAnswers.scale === "grow"
+            ? "Вы в стадии роста — нужен полный цикл: упаковка бренда, контент, SMM и продвижение."
+            : "Вы настроены на системную работу — построим медиаприсутствие как систему, а не разовые акции."
+        : "Вы запускаетесь — начнём с упаковки бренда, стратегии и первого контент-плана.";
 
   function chooseQuizAnswer(key: string, value: string) {
     setQuizAnswers((answers) => ({ ...answers, [key]: value }));
@@ -73,7 +86,7 @@ export default function Home() {
     const name = fields.get("name")?.toString().trim() ?? "";
     const contact = fields.get("contact")?.toString().trim() ?? "";
     const task = fields.get("task")?.toString().trim() ?? "";
-    const brief = `PLOHOSPAL — новый бриф\n\nИмя: ${name}\nКонтакт: ${contact}\nРекомендованный формат: ${recommendedFormat}\nЗадача: ${task}`;
+    const brief = `PLOHOSPAL — новый бриф\n\nИмя: ${name}\nКонтакт: ${contact}\nРекомендованный формат: ${recommendedFormat}\nПочему: ${recommendationReason}\nЗадача: ${task}`;
     setLeadBrief(brief);
     window.open("https://t.me/bimperv", "_blank", "noopener,noreferrer");
     navigator.clipboard?.writeText(brief).catch(() => undefined);
@@ -164,7 +177,7 @@ export default function Home() {
               {quizSteps[quizIndex].options.map(([value, label]) => <button key={value} type="button" onClick={() => chooseQuizAnswer(quizSteps[quizIndex].key, value)}>{label}<ArrowIcon /></button>)}
             </div>
           </> : <div className="quiz-result">
-            <div className="eyebrow">[ Ваш старт ]</div><p>Вам подойдёт формат</p><h2>{recommendedFormat}</h2><p className="quiz-result-copy">Соберём понятный первый шаг и подготовим предложение под вашу задачу.</p><button className="quiz-reset" type="button" onClick={() => { setQuizIndex(0); setQuizAnswers({}); setLeadBrief(""); }}>Пройти ещё раз</button>
+            <div className="eyebrow">[ Ваш старт ]</div><p>Вам подойдёт формат</p><h2>{recommendedFormat}</h2><p className="quiz-result-copy">{recommendationReason}</p><button className="quiz-reset" type="button" onClick={() => { setQuizIndex(0); setQuizAnswers({}); setLeadBrief(""); }}>Пройти ещё раз</button>
             <form className="lead-form" onSubmit={sendLeadBrief}>
               <label>Как вас зовут?<input name="name" required placeholder="Имя"/></label>
               <label>Как с вами связаться?<input name="contact" required placeholder="Telegram, телефон или почта"/></label>
