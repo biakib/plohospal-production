@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import ScrollReveal from "./ScrollReveal";
+import { YandexMetrika } from "./YandexMetrika";
 import "./globals.css";
 
 // Explicitly declare the mobile viewport. Some in-app browsers otherwise render
@@ -28,9 +29,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body>
-        <link rel="preload" href="/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossOrigin="anonymous"/>
-        <link rel="preload" href="/fonts/unbounded-variable.ttf" as="font" type="font/ttf" crossOrigin="anonymous"/>
-        <ScrollReveal/>{children}
+        <link rel="preload" href="/fonts/manrope-variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
+        <link rel="preload" href="/fonts/unbounded-variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
+        <ScrollReveal/><YandexMetrika/>{children}
       </body>
     </html>
   );

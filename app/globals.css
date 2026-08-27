@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-@font-face { font-family:"Manrope"; src:url("/fonts/manrope-variable.ttf") format("truetype"); font-style:normal; font-weight:200 800; font-display:block; }
-@font-face { font-family:"Unbounded"; src:url("/fonts/unbounded-variable.ttf") format("truetype"); font-style:normal; font-weight:200 900; font-display:block; }
-@font-face { font-family:"Cormorant Garamond"; src:url("/fonts/cormorant-garamond-italic-variable.ttf") format("truetype"); font-style:italic; font-weight:300 700; font-display:swap; }
+@font-face { font-family:"Manrope"; src:url("/fonts/manrope-variable.woff2") format("woff2"); font-style:normal; font-weight:200 800; font-display:block; }
+@font-face { font-family:"Unbounded"; src:url("/fonts/unbounded-variable.woff2") format("woff2"); font-style:normal; font-weight:200 900; font-display:block; }
+@font-face { font-family:"Cormorant Garamond"; src:url("/fonts/cormorant-garamond-italic-variable.woff2") format("woff2"); font-style:italic; font-weight:300 700; font-display:swap; }
 
 :root { --black:#0a0a0a; --white:#f1f0eb; --lime:#d9ff43; --line:rgba(241,240,235,.24); --font-body:"Manrope",Arial,sans-serif; --font-display:"Unbounded","Arial Black",sans-serif; --font-editorial:"Cormorant Garamond",Georgia,serif; }
 * { box-sizing:border-box; }
