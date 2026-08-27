@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 /** Номер счётчика Яндекс.Метрики. 0 — счётчик ещё не подключён, код не рендерится. */
-export const YANDEX_METRIKA_ID = 0;
+export const YANDEX_METRIKA_ID = 112013260;
 
 export function YandexMetrika() {
   if (!YANDEX_METRIKA_ID) return null;

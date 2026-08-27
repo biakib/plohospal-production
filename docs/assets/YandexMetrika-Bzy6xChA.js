@@ -1,1 +1,0 @@
-import{r as e}from"./rolldown-runtime-S-ySWqyJ.js";import{i as t,r as n}from"./framework-CXnKph_e.js";var r=e(t(),1),i=new Set([`title`,`meta`,`link`,`style`,`script`,`base`,`noscript`]);Array.from(i).join(`, `),r.createContext(void 0),n();var a=0;function o(){return null}export{a as YANDEX_METRIKA_ID,o as YandexMetrika};
