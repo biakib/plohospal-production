@@ -30,10 +30,10 @@ const formats = [
 ];
 
 const team = [
-  { name: "Илья Бушманов", role: "Основатель-идеолог", image: `${root}/assets/ilya-bushmanov-new.webp`, links: [["ВК", "https://vk.com/bimperv"], ["TG", "https://t.me/bimperv"], ["IG", "https://www.instagram.com/bimperv"]] },
+  { name: "Илья Бушманов", role: "Основатель, медиапродюсер", image: `${root}/assets/ilya-bushmanov-new.webp`, links: [["ВК", "https://vk.com/bimperv"], ["TG", "https://t.me/bimperv"], ["IG", "https://www.instagram.com/bimperv"]] },
   { name: "Иван Егоров", role: "Креативный директор", image: `${root}/assets/ivan-egorov-new.webp`, links: [["ВК", "https://vk.com/vanzep"], ["TG", "https://t.me/vanzep"], ["IG", "https://www.instagram.com/ivanegorov"]] },
-  { name: "Денис Круглов", role: "Сценарист, оператор, режиссёр", image: `${root}/assets/denis-kruglov-new.webp`, links: [["ВК", "https://vk.ru/motherfackers1"], ["IG", "https://www.instagram.com/kds_video_prod"]] },
-  { name: "Артур Рякин", role: "Продюсер проектов", image: `${root}/assets/artur-ryakin.webp`, links: [["ВК", "https://vk.ru/honeykut"]] },
+  { name: "Денис Круглов", role: "Съёмки и режиссура", image: `${root}/assets/denis-kruglov-new.webp`, links: [["ВК", "https://vk.ru/motherfackers1"], ["IG", "https://www.instagram.com/kds_video_prod"]] },
+  { name: "Артур Рякин", role: "Продюсер постпродакшна", image: `${root}/assets/artur-ryakin.webp`, links: [["ВК", "https://vk.ru/honeykut"]] },
   { name: "Илья Кузьмицкий", role: "Специалист по внедрению ИИ-технологий и обучению нейросетям", image: `${root}/assets/ilya-kuzmitsky.webp`, links: [["ВК", "https://vk.ru/neuro_ilya"], ["TG", "https://t.me/Neuro_Ilya"]] },
   { name: "Лиона Филь", role: "Руководитель направления актёрского и ораторского мастерства", image: `${root}/assets/liona-fil-portrait-v2.webp`, links: [["ВК", "https://vk.com/lionkas"], ["TG", "https://t.me/lionaelle"], ["IG", "https://www.instagram.com/lionaelle"]] },
   { name: "Юлия Гирш", role: "Специалист по AI и SMM", image: `${root}/assets/yulia-girsh-new.webp`, links: [["ВК", "https://vk.com/id138925509"], ["TG", "https://t.me/@girshjuli"], ["IG", "https://www.instagram.com/juli_girsh"]] },
