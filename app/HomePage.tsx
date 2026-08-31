@@ -8,12 +8,12 @@ const tickerText = "PLOHOSPAL PRODUCTION";
 const root = "";
 
 const services = [
-  { num: "1", title: "Упаковка бренда", text: "Позиционирование, фирменный стиль и презентации, которые продают.", result: "На выходе — бренд с характером: от логотипа и брендбука до питч-дека." },
-  { num: "2", title: "Стратегия и маркетинг", text: "Аудит медиаприсутствия, анализ аудитории и стратегия с понятными KPI.", result: "На выходе — не документ на полку, а живой инструмент роста бизнеса." },
-  { num: "3", title: "SMM и контент", text: "Контент-стратегия, ведение аккаунтов и работа с блогерами.", result: "На выходе — медиаприсутствие, которое приводит клиентов." },
-  { num: "4", title: "Продакшн: съёмка и сценарии", text: "Сценарии, съёмка видео и фото — под ключ, от идеи до публикации.", result: "На выходе — история и картинка, которая цепляет с первых секунд." },
-  { num: "5", title: "AI-контент", text: "AI-фото и AI-видео, цифровые аватары, озвучка и клонирование голоса.", result: "На выходе — контент без студии и съёмочных дней: быстрее и дешевле." },
-  { num: "6", title: "Внедрение и обучение ИИ", text: "Подбор ИИ-инструментов под процессы и обучение вашей команды.", result: "На выходе — команда, которая делает больше силами тех же людей." },
+  { title: "Упаковка бренда", text: "Позиционирование, фирменный стиль и презентации, которые продают.", result: "На выходе — бренд с характером: от логотипа и брендбука до питч-дека." },
+  { title: "Стратегия и маркетинг", text: "Аудит медиаприсутствия, анализ аудитории и стратегия с понятными KPI.", result: "На выходе — живой инструмент роста, который развивается вместе с бизнесом." },
+  { title: "SMM и контент", text: "Контент-стратегия, ведение аккаунтов и работа с блогерами.", result: "На выходе — медиаприсутствие, которое приводит клиентов." },
+  { title: "Продакшн: съёмка и сценарии", text: "Сценарии, съёмка видео и фото — под ключ, от идеи до публикации.", result: "На выходе — история и картинка, которая цепляет с первых секунд." },
+  { title: "AI-контент", text: "AI-фото и AI-видео, цифровые аватары, озвучка и клонирование голоса.", result: "На выходе — контент без студии и съёмочных дней: быстрее и дешевле." },
+  { title: "Внедрение и обучение ИИ", text: "Подбор ИИ-инструментов под процессы и обучение вашей команды.", result: "На выходе — команда, которая делает больше силами тех же людей." },
 ];
 
 const quizSteps = [
@@ -57,7 +57,7 @@ export default function Home() {
           ? "Вы запускаете кампанию — подключим полный цикл: контент, SMM и продвижение."
           : quizAnswers.scale === "grow"
             ? "Вы в стадии роста — нужен полный цикл: упаковка бренда, контент, SMM и продвижение."
-            : "Вы настроены на системную работу — построим медиаприсутствие как систему, а не разовые акции."
+            : "Вы настроены на системную работу — построим медиаприсутствие, которое работает по плану."
         : "Вы запускаетесь — начнём с упаковки бренда, стратегии и первого контент-плана.";
 
   function chooseQuizAnswer(key: string, value: string) {
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="intro-grid">
           <div className="portrait"><img src={`${root}/assets/about.webp`} alt="Команда PLOHOSPAL Production за работой" loading="lazy" decoding="async"/></div>
           <div className="intro-copy">
-            <h2>Не точечные услуги.<br/>Система, которая работает.</h2>
+            <h2>Система, которая<br/>приносит результат.</h2>
             <p>Для каждого клиента — свой продукт. Мы изучаем бизнес, находим точки роста и предлагаем именно то, что даст результат.</p>
             <ul><li>Полный цикл в одном месте</li><li>Бизнес любого масштаба</li><li>AI как усиление живого подхода</li></ul>
           </div>
@@ -137,10 +137,10 @@ export default function Home() {
         <div className="section-label-row"><div className="eyebrow">[ Направления ]</div><a className="text-link" href={`${root}/directions/`}>Все направления <ArrowIcon /></a></div>
         <div className="service-list">
           {services.map((service) => {
-            const isOpen = openService === service.num;
+            const isOpen = openService === service.title;
             return <article className={isOpen ? "is-open" : ""} key={service.num}>
-              <button className="service-toggle" type="button" aria-expanded={isOpen} onClick={() => setOpenService(isOpen ? null : service.num)}>
-                <span>{service.num}</span><h3>{service.title}</h3><p>{service.text}</p><b><ArrowIcon /></b>
+              <button className="service-toggle" type="button" aria-expanded={isOpen} onClick={() => setOpenService(isOpen ? null : service.title)}>
+                <h3>{service.title}</h3><p>{service.text}</p><b><ArrowIcon /></b>
               </button>
               <div className="service-expand"><div><p>{service.result}</p><a href="#contact">Обсудить проект <ArrowIcon /></a></div></div>
             </article>;
@@ -152,7 +152,7 @@ export default function Home() {
         <div className="manifesto-art"><img src={`${root}/assets/manifesto.webp`} alt="Креативный образ PLOHOSPAL Production" loading="lazy" decoding="async"/></div>
         <div className="manifesto-copy">
           <div className="eyebrow">[ Манифест ]</div>
-          <blockquote>«Бренд — это не логотип. Это то, как вас чувствуют»</blockquote>
+          <blockquote>«Бренд — это то, как вас чувствуют»</blockquote>
           <p>Мы сами — наш главный кейс. Всё, что предлагаем клиентам, делаем для себя первыми. Создаём истории, которые остаются — от поста до полнометражного кино.</p>
           <a className="dark-link" href={`${root}/manifesto/`}>Читать манифест <ArrowIcon /></a>
         </div>
@@ -161,7 +161,7 @@ export default function Home() {
       <section className="formats section" id="formats">
         <div className="section-head"><div className="eyebrow">[ Форматы сотрудничества ]</div><h2>Подключаемся<br/>на нужном масштабе</h2></div>
         <div className="format-grid">
-          {formats.map(([title, forWhom, desc], i) => <article key={title}><span>{i + 1}</span><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Обсудить проект <ArrowIcon /></a></article>)}
+          {formats.map(([title, forWhom, desc], i) => <article key={title}><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Обсудить проект <ArrowIcon /></a></article>)}
         </div>
         <p className="note">Точные условия — индивидуально после брифинга.</p>
       </section>
@@ -171,7 +171,7 @@ export default function Home() {
         <div className="quiz-panel">
           {!quizDone ? <>
             <div className="quiz-progress" aria-label={`Вопрос ${quizIndex + 1} из ${quizSteps.length}`}><span style={{ width: `${((quizIndex + 1) / quizSteps.length) * 100}%` }}/></div>
-            <small>0{quizIndex + 1} / 0{quizSteps.length}</small>
+            <small>Вопрос {quizIndex + 1} из {quizSteps.length}</small>
             <h2>{quizSteps[quizIndex].question}</h2>
             <div className="quiz-options">
               {quizSteps[quizIndex].options.map(([value, label]) => <button key={value} type="button" onClick={() => chooseQuizAnswer(quizSteps[quizIndex].key, value)}>{label}<ArrowIcon /></button>)}
@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       <section className="team section" id="team">
-        <div className="section-head"><div className="eyebrow">[ Команда ]</div><h2>Практики, а не<br/>наблюдатели</h2></div>
+        <div className="section-head"><div className="eyebrow">[ Команда ]</div><h2>Проверяем всё<br/>на себе</h2></div>
         <p className="team-lead">Стратеги, маркетологи, сценаристы и AI-специалисты, объединённые одной целью — создавать медиаприсутствие, которое работает.</p>
         <div className="team-grid">
           {team.map((person) => <article key={person.name}>
