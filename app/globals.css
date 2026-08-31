@@ -2,9 +2,8 @@
 
 @font-face { font-family:"Manrope"; src:url("/fonts/manrope-variable.woff2") format("woff2"); font-style:normal; font-weight:200 800; font-display:block; }
 @font-face { font-family:"Unbounded"; src:url("/fonts/unbounded-variable.woff2") format("woff2"); font-style:normal; font-weight:200 900; font-display:block; }
-@font-face { font-family:"Cormorant Garamond"; src:url("/fonts/cormorant-garamond-italic-variable.woff2") format("woff2"); font-style:italic; font-weight:300 700; font-display:swap; }
 
-:root { --black:#0a0a0a; --white:#f1f0eb; --lime:#d9ff43; --line:rgba(241,240,235,.24); --font-body:"Manrope",Arial,sans-serif; --font-display:"Unbounded","Arial Black",sans-serif; --font-editorial:"Cormorant Garamond",Georgia,serif; }
+:root { --black:#0a0a0a; --white:#f1f0eb; --lime:#d9ff43; --line:rgba(241,240,235,.24); --font-body:"Manrope",Arial,sans-serif; --font-display:"Unbounded","Arial Black",sans-serif; }
 * { box-sizing:border-box; }
 html { width:100%; max-width:100%; overflow-x:hidden; scroll-behavior:smooth; }
 body { width:100%; max-width:100%; margin:0; overflow-x:hidden; background:var(--black); color:var(--white); font-family:var(--font-body); font-weight:450; }
@@ -62,7 +61,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 @keyframes ticker { to { transform:translateX(-50%); } }
 .intro { background:var(--white); color:#0b0b0b; }
 .statement { margin:32px 0 80px auto; max-width:900px; font-size:clamp(28px,3.5vw,52px); line-height:1.1; letter-spacing:-.04em; font-weight:700; }
-.statement em { font-family:var(--font-editorial); font-weight:500; }
+.statement em { font-family:var(--font-display); font-style:normal; font-weight:650; }
 .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:5vw; align-items:center; }
 .portrait { overflow:visible; }
 .portrait img { object-fit:contain; object-position:center; width:100%; height:auto; border-radius:12px; filter:grayscale(1); }
@@ -85,7 +84,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .service-toggle > span { font-family:var(--font-body); font-size:clamp(44px,4.5vw,66px); font-weight:800; line-height:.8; letter-spacing:-.04em; color:rgba(241,240,235,.15); transition:color .25s; }
 .service-list article:hover .service-toggle > span,.service-list article.is-open .service-toggle > span { color:rgba(0,0,0,.2); }
 .service-list article:hover .service-toggle,.service-list article.is-open .service-toggle { padding-left:20px; background:var(--lime); color:#000; }
-.service-list h3 { margin:0; font-size:46px; letter-spacing:-.04em; }
+.service-list h3 { margin:0; font-family:var(--font-display); font-size:32px; font-weight:650; line-height:1.05; letter-spacing:-.02em; }
 .service-toggle p { margin:0; max-width:410px; color:#aaa; line-height:1.45; transition:color .25s; }
 .service-list article:hover .service-toggle p,.service-list article.is-open .service-toggle p { color:#222; }
 .service-toggle b { justify-self:end; transition:transform .25s; }
@@ -101,7 +100,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .manifesto-art { overflow:hidden; background:#bbb; }
 .manifesto-art img { filter:grayscale(1) contrast(1.2); mix-blend-mode:multiply; }
 .manifesto-copy { padding:100px max(40px,7vw); display:flex; flex-direction:column; }
-blockquote { margin:auto 0 60px; font:italic 500 clamp(54px,6.4vw,100px)/.88 var(--font-editorial); letter-spacing:-.035em; }
+blockquote { margin:auto 0 60px; font-family:var(--font-display); font-weight:650; font-size:clamp(38px,4.6vw,72px); line-height:1.02; letter-spacing:-.025em; }
 .manifesto-copy p { max-width:570px; font-size:18px; line-height:1.5; }
 .dark-link { margin-top:18px; align-self:flex-start; }
 .section-head { display:flex; justify-content:space-between; align-items:flex-start; }
@@ -111,7 +110,7 @@ blockquote { margin:auto 0 60px; font:italic 500 clamp(54px,6.4vw,100px)/.88 var
 .format-grid article { min-height:370px; padding:34px; border-right:1px solid #aaa; border-bottom:1px solid #aaa; display:flex; flex-direction:column; }
 .format-grid article > span { font-family:var(--font-body); font-size:clamp(56px,6vw,88px); font-weight:800; line-height:.8; letter-spacing:-.04em; color:rgba(11,11,11,.1); transition:color .25s; }
 .format-grid article:hover > span { color:rgba(11,11,11,.18); }
-.format-grid h3 { margin:34px 0 5px; font-size:52px; text-transform:uppercase; letter-spacing:-.05em; }
+.format-grid h3 { margin:34px 0 5px; font-family:var(--font-display); font-size:36px; font-weight:650; text-transform:uppercase; letter-spacing:-.02em; }
 .format-grid small { text-transform:uppercase; letter-spacing:.08em; }
 .format-grid p { max-width:440px; font-size:17px; line-height:1.5; color:#555; }
 .format-grid a { margin-top:auto; font-weight:700; text-transform:uppercase; font-size:12px; text-decoration:underline; text-underline-offset:5px; }
@@ -162,7 +161,7 @@ blockquote { margin:auto 0 60px; font:italic 500 clamp(54px,6.4vw,100px)/.88 var
 .team-photo img { filter:grayscale(1); transition:.4s; object-position:center top; }
 .team-photo > span { position:absolute; right:14px; top:14px; width:38px; height:38px; display:grid; place-items:center; color:#000; background:var(--lime); border-radius:50%; }
 .team-grid article:hover img { filter:grayscale(0); transform:scale(1.025); }
-.team-grid h3 { font-size:22px; margin:18px 0 5px; }
+.team-grid h3 { font-family:var(--font-display); font-size:17px; font-weight:650; margin:18px 0 5px; }
 .team-grid p { margin:0; color:#aaa; }
 .socials { display:flex; gap:12px; margin-top:14px; font-size:11px; font-weight:700; transition:opacity .25s,transform .25s; }
 .socials a { border:1px solid #555; border-radius:20px; padding:7px 10px; }
@@ -215,7 +214,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
 .direction-detail a { display:inline-block; margin-top:25px; padding:13px 18px; background:var(--lime); color:#000; border-radius:30px; font-size:12px; font-weight:800; text-transform:uppercase; }
 .manifesto-intro { background:var(--lime); color:#000; }
 .manifesto-intro p { margin:0; max-width:1150px; font-size:clamp(50px,7vw,106px); line-height:.95; letter-spacing:-.055em; font-weight:700; }
-.manifesto-intro em { font-family:var(--font-editorial); font-weight:500; }
+.manifesto-intro em { font-family:var(--font-display); font-style:normal; font-weight:650; }
 .manifesto-lines { padding-top:0; padding-bottom:0; }
 .manifesto-line { display:grid; grid-template-columns:90px 1.1fr 1fr; gap:40px; padding:65px 0; border-bottom:1px solid var(--line); }
 .manifesto-line>span { font-size:12px; }
@@ -326,7 +325,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .intro-copy { padding:20px 0 0; }
   .service-toggle { gap:10px; }
   .service-toggle > span { font-size:26px; }
-  .service-list h3 { font-size:34px; }
+  .service-list h3 { font-size:21px; }
   .service-toggle p { font-size:14px; }
   .service-expand>div { display:block; padding-left:60px; }
   .service-expand a { display:inline-block; margin-top:18px; }
@@ -342,7 +341,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   blockquote { font-size:48px; }
   .format-grid { grid-template-columns:1fr; }
   .format-grid article { min-height:330px; }
-  .format-grid h3 { font-size:44px; }
+  .format-grid h3 { font-size:26px; }
   .format-grid article > span { font-size:48px; }
   .team-grid { grid-template-columns:1fr; }
   .team-photo { height:520px; }
@@ -381,3 +380,25 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .motion-ready .reveal-item { transform:translateY(22px); }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .ticker div,.hero-lens,.hero-lens::before,.hero-lens::after,.hero-word i { animation:none; } * { transition:none!important; } }
+
+/* Дизайнерский шрифт в коротких элементах: кнопки, подписи, лейблы.
+   Абзацы и длинный текст остаются в Manrope для читабельности. */
+.hero-side { font-family:var(--font-display); font-size:11px; font-weight:700; letter-spacing:.02em; }
+.numbers span { font-family:var(--font-display); font-size:11px; font-weight:700; }
+.format-grid small { font-family:var(--font-display); font-size:10.5px; font-weight:700; }
+.format-grid a { font-family:var(--font-display); font-size:11px; font-weight:750; }
+.team-grid p { font-family:var(--font-display); font-size:11px; font-weight:600; line-height:1.35; }
+.socials a { font-family:var(--font-display); font-size:10.5px; font-weight:700; }
+.quiz-options button { font-family:var(--font-display); font-size:13px; line-height:1.3; }
+.quiz-reset { font-family:var(--font-display); font-size:11px; }
+.lead-form button { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
+.faq summary { font-family:var(--font-display); font-size:14px; font-weight:650; line-height:1.3; }
+.faq-list summary { font-family:var(--font-display); font-size:15px; font-weight:650; line-height:1.3; }
+.footer-grid small { font-family:var(--font-display); font-size:10.5px; font-weight:700; }
+.footer-grid a { font-family:var(--font-display); font-size:13px; font-weight:600; }
+.copyright { font-family:var(--font-display); font-size:10px; font-weight:700; }
+.service-expand a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
+.text-link,.dark-link { font-family:var(--font-display); font-size:11px; font-weight:750; }
+.direction-detail a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
+.manifesto-end a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
+.faq-aside a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
