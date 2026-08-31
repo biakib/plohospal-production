@@ -179,7 +179,7 @@ export default function Home() {
           </> : <div className="quiz-result">
             <div className="eyebrow">[ Ваш старт ]</div><p>Вам подойдёт формат</p><h2>{recommendedFormat}</h2><p className="quiz-result-copy">{recommendationReason}</p><button className="quiz-reset" type="button" onClick={() => { setQuizIndex(0); setQuizAnswers({}); setLeadBrief(""); }}>Пройти ещё раз</button>
             <form className="lead-form" onSubmit={sendLeadBrief}>
-              <label>Как вас зовут?<input name="name" required placeholder="Имя"/></label>
+              <label>Как вас зовут?<input name="name" required autoComplete="name" placeholder="Имя"/></label>
               <label>Как с вами связаться?<input name="contact" required placeholder="Telegram, телефон или почта"/></label>
               <label>Коротко о задаче<textarea name="task" required placeholder="Что хотите изменить или запустить?" rows={1}/></label>
               <label className="consent-field"><input name="consent" type="checkbox" required/><span>Даю согласие на обработку персональных данных согласно <a href={`${root}/privacy/`} target="_blank" rel="noreferrer">Политике обработки персональных данных</a>.</span></label>

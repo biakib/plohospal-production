@@ -392,3 +392,13 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
 .direction-detail a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
 .manifesto-end a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
 .faq-aside a { font-family:var(--font-display); font-size:10.5px; font-weight:750; }
+
+/* Тактильный отклик: эффект нажатия и видимый фокус */
+nav a,.nav-cta,.desktop-more-trigger,.round-link,.text-link,.dark-link,.quiz-reset,.socials a,.format-grid a,.service-expand a,.direction-detail a,.manifesto-end a,.faq-aside a,.faq-more,.footer-grid a,.copyright a,.mobile-menu div a { touch-action:manipulation; }
+nav a:active,.nav-cta:active,.desktop-more-trigger:active,.round-link:active,.text-link:active,.dark-link:active,.quiz-reset:active,.socials a:active,.format-grid a:active,.service-expand a:active,.direction-detail a:active,.manifesto-end a:active,.faq-aside a:active,.faq-more:active,.footer-grid a:active,.copyright a:active,.mobile-menu div a:active { transform:scale(.96); }
+.service-toggle:active,.quiz-options button:active,.faq summary:active,.faq-list summary:active { transform:scale(.99); }
+.lead-form button:active { transform:scale(.95); }
+nav a:focus-visible,.nav-cta:focus-visible,.desktop-more-trigger:focus-visible,.round-link:focus-visible,.text-link:focus-visible,.dark-link:focus-visible,.quiz-reset:focus-visible,.socials a:focus-visible,.format-grid a:focus-visible,.service-expand a:focus-visible,.direction-detail a:focus-visible,.manifesto-end a:focus-visible,.faq-aside a:focus-visible,.faq-more:focus-visible,.service-toggle:focus-visible,.quiz-options button:focus-visible,.lead-form button:focus-visible,.lead-form input:focus-visible,.lead-form textarea:focus-visible,.faq summary:focus-visible,.faq-list summary:focus-visible,.mobile-menu summary:focus-visible { outline:2px solid var(--lime); outline-offset:3px; border-radius:6px; }
+.faq summary:hover,.faq-list summary:hover { color:var(--lime); }
+.faq-list summary:hover b { color:var(--lime); }
+.direction-card:hover h2,.format-grid article:hover h3 { color:var(--lime); }
