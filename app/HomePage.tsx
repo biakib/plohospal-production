@@ -129,7 +129,7 @@ export default function Home() {
 
       <section className="numbers section" aria-label="Результаты">
         <div><strong>48</strong><span>часов до первой<br/>персональной стратегии</span></div>
-        <div><strong>2</strong><span>дня до первого<br/>AI-аватара</span></div>
+        <div><strong>14</strong><span>дней до первого<br/>AI-аватара</span></div>
         <div><strong>100%</strong><span>индивидуальный<br/>подход</span></div>
       </section>
 
@@ -142,7 +142,7 @@ export default function Home() {
               <button className="service-toggle" type="button" aria-expanded={isOpen} onClick={() => setOpenService(isOpen ? null : service.num)}>
                 <span>{service.num}</span><h3>{service.title}</h3><p>{service.text}</p><b><ArrowIcon /></b>
               </button>
-              <div className="service-expand"><div><p>{service.result}</p><a href="#contact">Обсудить задачу <ArrowIcon /></a></div></div>
+              <div className="service-expand"><div><p>{service.result}</p><a href="#contact">Обсудить проект <ArrowIcon /></a></div></div>
             </article>;
           })}
         </div>
@@ -161,7 +161,7 @@ export default function Home() {
       <section className="formats section" id="formats">
         <div className="section-head"><div className="eyebrow">[ Форматы сотрудничества ]</div><h2>Подключаемся<br/>на нужном масштабе</h2></div>
         <div className="format-grid">
-          {formats.map(([title, forWhom, desc], i) => <article key={title}><span>{i + 1}</span><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Получить предложение <ArrowIcon /></a></article>)}
+          {formats.map(([title, forWhom, desc], i) => <article key={title}><span>{i + 1}</span><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Обсудить проект <ArrowIcon /></a></article>)}
         </div>
         <p className="note">Точные условия — индивидуально после брифинга.</p>
       </section>

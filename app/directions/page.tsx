@@ -20,7 +20,7 @@ export default function DirectionsPage() {
     <section className="page-hero directions-hero"><div className="eyebrow">[ 01 — Направления ]</div><h1>ПОЛНЫЙ ЦИКЛ<br/><span>ДЛЯ БРЕНДА</span></h1><p>Шесть направлений закрывают отдельные задачи, а вместе образуют цельную систему присутствия в медиапространстве.</p></section>
     <section className="pain-strip"><div><strong>01</strong><span>Бренд есть, но его<br/>никто не замечает</span></div><div><strong>02</strong><span>Нет системного<br/>медиаприсутствия</span></div><div><strong>03</strong><span>Конкуренты выглядят<br/>убедительнее</span></div></section>
     <section className="directions-list section">{directions.map((item)=><article className="direction-card" key={item.number}>
-      <div className="direction-number">[{item.number}]</div><div className="direction-body"><h2>{item.title}</h2><p className="direction-lead">{item.lead}</p><div className="direction-detail"><div><small>Что делаем</small><ul>{item.items.map(x=><li key={x}>{x}</li>)}</ul></div><div><small>Результат</small><p>{item.result}</p><a href="/#contact">Обсудить задачу <ArrowIcon /></a></div></div></div>
+      <div className="direction-number">[{item.number}]</div><div className="direction-body"><h2>{item.title}</h2><p className="direction-lead">{item.lead}</p><div className="direction-detail"><div><small>Что делаем</small><ul>{item.items.map(x=><li key={x}>{x}</li>)}</ul></div><div><small>Результат</small><p>{item.result}</p><a href="/#contact">Обсудить проект <ArrowIcon /></a></div></div></div>
     </article>)}</section>
     <SiteFooter/>
   </main>;
