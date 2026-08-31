@@ -129,8 +129,8 @@ export default function Home() {
 
       <section className="numbers section" aria-label="Результаты">
         <div><strong>48</strong><span>часов до первой<br/>персональной стратегии</span></div>
-        <div><strong>14</strong><span>дней до первого<br/>AI-аватара</span></div>
-        <div><strong>100%</strong><span>индивидуальный<br/>подход</span></div>
+        <div><strong>2</strong><span>дня до первого<br/>AI-аватара</span></div>
+        <div><strong>6</strong><span>направлений<br/>полного цикла</span></div>
       </section>
 
       <section className="services section">
