@@ -3,6 +3,7 @@
 import { useState, type FormEvent, type PointerEvent } from "react";
 import { ArrowIcon } from "./ArrowIcon";
 import { SiteFooter, SiteHeader } from "./SiteChrome";
+import { BackToTop } from "./BackToTop";
 
 const tickerText = "PLOHOSPAL PRODUCTION";
 const root = "";
@@ -168,7 +169,7 @@ export default function Home() {
 
       <section className="quiz section" id="quiz">
         <div className="quiz-heading"><div className="eyebrow">[ Быстрый бриф ]</div><p>Ответьте на три вопроса — подскажем, с какого формата лучше начать.</p></div>
-        <div className="quiz-panel">
+        <div className="quiz-panel" aria-live="polite">
           {!quizDone ? <>
             <div className="quiz-progress" aria-label={`Вопрос ${quizIndex + 1} из ${quizSteps.length}`}><span style={{ width: `${((quizIndex + 1) / quizSteps.length) * 100}%` }}/></div>
             <small>Вопрос {quizIndex + 1} из {quizSteps.length}</small>
@@ -213,6 +214,7 @@ export default function Home() {
         </div></div>
       </section>
       <SiteFooter/>
+      <BackToTop/>
     </main>
   );
 }

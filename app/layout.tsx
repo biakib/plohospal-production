@@ -9,6 +9,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: "#0a0a0a",
 };
 
 export const dynamic = "force-static";
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://plohospal.ru"),
   title,
   description,
+  manifest: "/manifest.json",
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "64x64", type: "image/png" },
