@@ -20,8 +20,19 @@ const questions = [
   ["Как быстро вы отвечаете?","В рабочее время — в течение нескольких часов. На первичный запрос о сотрудничестве отвечаем в течение 24 часов."],
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: questions.map(([q, a]) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+};
+
 export default function FaqPage() {
   return <main id="top"><SiteHeader/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     <section className="page-hero faq-hero"><div className="eyebrow">[ FAQ ]</div><h1>ЕСТЬ<br/><span>ВОПРОСЫ?</span></h1><p>Собрали всё, что обычно спрашивают перед началом работы. Не нашли нужного — ответим лично.</p></section>
     <section className="faq-page section"><div className="faq-aside"><div className="eyebrow">[ Ответы ]</div><p>11 вопросов<br/>о работе с нами</p><a href="https://t.me/bimperv" target="_blank" rel="noreferrer">Задать свой вопрос <ArrowIcon /></a></div><div className="faq-list">{questions.map(([q,a],i)=><details key={q}><summary><b>{q}</b><i>+</i></summary><p>{a}</p></details>)}</div></section>
     <SiteFooter/>
