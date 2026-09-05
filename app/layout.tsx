@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://plohospal.ru"),
   title,
   description,
+  verification: {
+    yandex: "dea59a3d5e9021bc",
+    google: "EynpbqkIKudyrG_AH_Dd8zioNU8gUQi-NstX2nzQpCc",
+  },
   manifest: "/manifest.json",
   icons: {
     icon: [
