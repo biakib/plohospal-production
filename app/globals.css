@@ -420,3 +420,7 @@ nav a:focus-visible,.nav-cta:focus-visible,.desktop-more-trigger:focus-visible,.
 .back-to-top:active { transform:scale(.92); }
 .back-to-top:focus-visible { outline:2px solid var(--lime); outline-offset:3px; }
 @media (max-width:560px) { .back-to-top { right:14px; bottom:14px; width:46px; height:46px; } }
+
+/* Увеличенные тап-зоны для мелких текстовых ссылок (паддинг компенсируется полями) */
+.text-link,.dark-link,.service-expand a,.format-grid a,.faq-aside a,.faq-more { padding:14px 0; margin:-14px 0; }
+.service-expand a:first-child { margin-top:-14px; }
