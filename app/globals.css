@@ -93,7 +93,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .service-expand a,.format-grid a,.lead-form button,.direction-detail a,.manifesto-end a,.faq-aside a { display:inline-flex; align-items:center; gap:8px; }
 .service-expand a { flex:none; font-size:12px; font-weight:800; text-transform:uppercase; text-decoration:underline; text-underline-offset:6px; }
 .service-list article.is-open .service-expand { grid-template-rows:1fr; }
-.service-list article.is-open .service-expand>div { padding-top:0; padding-bottom:36px; }
+.service-list article.is-open .service-expand>div { padding-top:26px; padding-bottom:36px; }
 .manifesto { display:grid; grid-template-columns:1fr 1fr; min-height:820px; padding:0; background:var(--lime); color:#000; }
 .manifesto-art { overflow:hidden; background:#bbb; }
 .manifesto-art img { filter:grayscale(1) contrast(1.2); mix-blend-mode:multiply; }
