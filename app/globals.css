@@ -105,7 +105,7 @@ blockquote { margin:auto 0 60px; font-family:var(--font-display); font-weight:65
 .section-head h2 { width:60%; }
 .formats { background:var(--white); color:#0b0b0b; }
 .format-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid #aaa; border-left:1px solid #aaa; }
-.format-grid article { min-height:370px; padding:34px; border-right:1px solid #aaa; border-bottom:1px solid #aaa; display:flex; flex-direction:column; }
+.format-grid article { min-height:300px; padding:34px; border-right:1px solid #aaa; border-bottom:1px solid #aaa; display:flex; flex-direction:column; }
 .format-grid h3 { margin:0 0 5px; font-family:var(--font-display); font-size:36px; font-weight:650; text-transform:uppercase; letter-spacing:-.02em; }
 .format-grid small { text-transform:uppercase; letter-spacing:.08em; }
 .format-grid p { max-width:440px; font-size:17px; line-height:1.5; color:#555; }
@@ -119,7 +119,7 @@ blockquote { margin:auto 0 60px; font-family:var(--font-display); font-weight:65
 .quiz-progress span { display:block; height:100%; background:var(--lime); transition:width .35s ease; }
 .quiz-panel>small { color:#888; font-size:11px; letter-spacing:.12em; }
 .quiz-panel h2 { max-width:720px; margin:52px 0; font-size:clamp(36px,4.6vw,70px); line-height:.94; letter-spacing:-.055em; }
-.quiz-options { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.quiz-options { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 .quiz-options button { min-height:94px; padding:20px; display:flex; align-items:center; justify-content:space-between; gap:20px; border:1px solid #555; background:transparent; color:var(--white); font:700 15px/1.2 var(--font-body); text-align:left; cursor:pointer; transition:.2s; }
 .quiz-options button:hover { background:var(--lime); border-color:var(--lime); color:#000; transform:translateY(-3px); }
 .quiz-options button span { font-size:22px; }
@@ -160,7 +160,7 @@ blockquote { margin:auto 0 60px; font-family:var(--font-display); font-weight:65
 .team-grid h3 { font-family:var(--font-display); font-size:17px; font-weight:650; margin:18px 0 5px; }
 .team-grid p { margin:0; color:#aaa; }
 .socials { display:flex; gap:12px; margin-top:14px; font-size:11px; font-weight:700; transition:opacity .25s,transform .25s; }
-.socials a { border:1px solid #555; border-radius:20px; padding:7px 10px; }
+.socials a { border:1px solid #555; border-radius:20px; padding:9px 12px; }
 .socials a:hover { background:var(--white); color:#000; }
 @media (hover:hover) { .team-grid .socials { opacity:.34; transform:translateY(-5px); } .team-grid article:hover .socials { opacity:1; transform:translateY(0); } }
 .faq { background:#181818; }
@@ -182,7 +182,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
 .footer-grid div { display:flex; flex-direction:column; gap:8px; }
 .footer-grid small { margin-bottom:12px; text-transform:uppercase; letter-spacing:.08em; }
 .footer-grid a:hover { text-decoration:underline; }
-.copyright { margin-top:100px; padding-top:18px; border-top:1px solid #000; display:flex; justify-content:space-between; font-size:11px; font-weight:700; }
+.copyright { margin-top:48px; padding-top:18px; border-top:1px solid #000; display:flex; justify-content:space-between; font-size:11px; font-weight:700; }
 
 /* Inner pages */
 .page-hero { min-height:760px; padding:150px max(28px,calc((100vw - 1320px)/2)) 80px; display:flex; flex-direction:column; justify-content:flex-end; border-bottom:1px solid var(--line); overflow:hidden; }
@@ -333,7 +333,7 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .manifesto-copy { min-height:570px; padding:70px 20px; }
   blockquote { font-size:48px; }
   .format-grid { grid-template-columns:1fr; }
-  .format-grid article { min-height:330px; }
+  .format-grid article { min-height:280px; }
   .format-grid h3 { font-size:26px; }
     .team-grid { grid-template-columns:1fr; }
   .team-photo { height:520px; }
@@ -426,3 +426,6 @@ nav a:focus-visible,.nav-cta:focus-visible,.desktop-more-trigger:focus-visible,.
 /* Увеличенные тап-зоны для мелких текстовых ссылок (паддинг компенсируется полями) */
 .text-link,.dark-link,.service-expand a,.format-grid a,.faq-aside a,.faq-more { padding:14px 0; margin:-14px 0; }
 .service-expand a:first-child { margin-top:-14px; }
+.lead-form-alt { margin:16px 0 0; font-size:13px; color:#888; }
+.lead-form-alt a { color:var(--white); text-decoration:underline; text-underline-offset:4px; }
+.lead-form-alt a:hover { color:var(--lime); }

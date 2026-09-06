@@ -188,6 +188,7 @@ export default function Home() {
               <label className="consent-field"><input name="consent" type="checkbox" required/><span>Даю согласие на обработку персональных данных согласно <a href={`${root}/privacy/`} target="_blank" rel="noreferrer">Политике обработки персональных данных</a>.</span></label>
               <p className="lead-form-note">После нажатия откроется Telegram, а текст брифа будет скопирован в буфер. Сообщение отправляете вы сами.</p>
               <button type="submit">Получить персональную стратегию <ArrowIcon /></button>
+              <p className="lead-form-alt">Удобнее почтой? <a href="mailto:Bimperv@yandex.ru">Bimperv@yandex.ru</a></p>
             </form>
             {leadBrief && <div className="lead-confirmation"><b>Бриф скопирован.</b><span>Telegram открыт — вставьте текст в сообщение и отправьте его.</span><button type="button" onClick={() => navigator.clipboard?.writeText(leadBrief)}>Скопировать ещё раз</button></div>}
           </div>}
