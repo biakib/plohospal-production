@@ -29,11 +29,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: "/apple-touch-icon.png",
   },
-  openGraph: { title, description, type: "website", locale: "ru_RU", images: [{ url: "/og.png", width: 1600, height: 837, alt: "PLOHOSPAL PRODUCTION" }] },
+  openGraph: { title, description, type: "website", locale: "ru_RU", images: [{ url: "/og.png", width: 1200, height: 630, alt: "PLOHOSPAL PRODUCTION" }] },
   twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
 };
 

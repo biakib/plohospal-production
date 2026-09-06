@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       <section className="services section">
-        <div className="section-label-row"><div className="eyebrow">[ Направления ]</div><a className="text-link" href={`${root}/directions/`}>Все направления <ArrowIcon /></a></div>
+        <div className="section-label-row"><a className="text-link" href={`${root}/directions/`}>Все направления <ArrowIcon /></a></div>
         <div className="service-list">
           {services.map((service) => {
             const isOpen = openService === service.title;
@@ -154,7 +154,7 @@ export default function Home() {
       <section className="manifesto section">
         <div className="manifesto-art"><img src={`${root}/assets/manifesto.webp`} alt="Креативный образ PLOHOSPAL Production" loading="lazy" decoding="async"/></div>
         <div className="manifesto-copy">
-          <div className="eyebrow">[ Манифест ]</div>
+          
           <blockquote>«Бренд — это то, как вас чувствуют»</blockquote>
           <p>Мы сами — наш главный кейс. Всё, что предлагаем клиентам, делаем для себя первыми. Создаём истории, которые остаются — от поста до полнометражного кино.</p>
           <a className="dark-link" href={`${root}/manifesto/`}>Читать манифест <ArrowIcon /></a>
@@ -162,7 +162,7 @@ export default function Home() {
       </section>
 
       <section className="formats section" id="formats">
-        <div className="section-head"><div className="eyebrow">[ Форматы сотрудничества ]</div><h2>Подключаемся<br/>на нужном масштабе</h2></div>
+        <div className="section-head"><h2>Подключаемся<br/>на нужном масштабе</h2></div>
         <div className="format-grid">
           {formats.map(([title, forWhom, desc], i) => <article key={title}><h3>{title}</h3><small>{forWhom}</small><p>{desc}</p><a href="#contact">Обсудить проект <ArrowIcon /></a></article>)}
         </div>
@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
       <section className="quiz section" id="quiz">
-        <div className="quiz-heading"><div className="eyebrow">[ Быстрый бриф ]</div><p>Ответьте на три вопроса — подскажем, с какого формата лучше начать.</p></div>
+        <div className="quiz-heading"><p>Ответьте на три вопроса — подскажем, с какого формата лучше начать.</p></div>
         <div className="quiz-panel" aria-live="polite">
           {!quizDone ? <>
             <div className="quiz-progress" aria-label={`Вопрос ${quizIndex + 1} из ${quizSteps.length}`}><span style={{ width: `${((quizIndex + 1) / quizSteps.length) * 100}%` }}/></div>
@@ -180,7 +180,7 @@ export default function Home() {
               {quizSteps[quizIndex].options.map(([value, label]) => <button key={value} type="button" onClick={() => chooseQuizAnswer(quizSteps[quizIndex].key, value)}>{label}<ArrowIcon /></button>)}
             </div>
           </> : <div className="quiz-result">
-            <div className="eyebrow">[ Ваш старт ]</div><p>Вам подойдёт формат</p><h2>{recommendedFormat}</h2><p className="quiz-result-copy">{recommendationReason}</p><button className="quiz-reset" type="button" onClick={() => { setQuizIndex(0); setQuizAnswers({}); setLeadBrief(""); }}>Пройти ещё раз</button>
+            <p>Вам подойдёт формат</p><h2>{recommendedFormat}</h2><p className="quiz-result-copy">{recommendationReason}</p><button className="quiz-reset" type="button" onClick={() => { setQuizIndex(0); setQuizAnswers({}); setLeadBrief(""); }}>Пройти ещё раз</button>
             <form className="lead-form" onSubmit={sendLeadBrief}>
               <label>Как вас зовут?<input name="name" required autoComplete="name" placeholder="Имя"/></label>
               <label>Как с вами связаться?<input name="contact" required placeholder="Telegram, телефон или почта"/></label>
@@ -196,7 +196,7 @@ export default function Home() {
       </section>
 
       <section className="team section" id="team">
-        <div className="section-head"><div className="eyebrow">[ Команда ]</div><h2>Проверяем всё<br/>на себе</h2></div>
+        <div className="section-head"><h2>Проверяем всё<br/>на себе</h2></div>
         <p className="team-lead">Стратеги, маркетологи, сценаристы и AI-специалисты, объединённые одной целью — создавать медиаприсутствие, которое работает.</p>
         <div className="team-grid">
           {team.map((person) => <article key={person.name}>
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       <section className="faq section">
-        <div className="eyebrow">[ FAQ ]</div>
+        
         <div className="faq-grid"><h2>Перед тем,<br/>как начать</h2><div>
           <details><summary>С какими нишами вы работаете?<span>+</span></summary><p>С бизнесом любого масштаба — от личного бренда и локального проекта до крупной компании.</p></details>
           <details><summary>Можно начать с одной задачи?<span>+</span></summary><p>Да. Начнём с аудита и приоритетной задачи, а затем соберём систему вокруг измеримого результата.</p></details>

@@ -17,7 +17,7 @@ const directions = [
 
 export default function DirectionsPage() {
   return <main id="top"><SiteHeader/>
-    <section className="page-hero directions-hero"><div className="eyebrow">[ Направления ]</div><h1>ПОЛНЫЙ ЦИКЛ<br/><span>ДЛЯ БРЕНДА</span></h1><p>Шесть направлений закрывают отдельные задачи, а вместе образуют цельную систему присутствия в медиапространстве.</p></section>
+    <section className="page-hero directions-hero"><h1>ПОЛНЫЙ ЦИКЛ<br/><span>ДЛЯ БРЕНДА</span></h1><p>Шесть направлений закрывают отдельные задачи, а вместе образуют цельную систему присутствия в медиапространстве.</p></section>
     <section className="pain-strip"><div><span>Бренд есть, но его<br/>никто не замечает</span></div><div><span>Нет системного<br/>медиаприсутствия</span></div><div><span>Конкуренты выглядят<br/>убедительнее</span></div></section>
     <section className="directions-list section">{directions.map((item)=><article className="direction-card" key={item.number}>
       <div className="direction-body"><h2>{item.title}</h2><p className="direction-lead">{item.lead}</p><div className="direction-detail"><div><small>Что делаем</small><ul>{item.items.map(x=><li key={x}>{x}</li>)}</ul></div><div><small>Результат</small><p>{item.result}</p><a href="/#contact">Обсудить проект <ArrowIcon /></a></div></div></div>

@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return <main id="top">
     <SiteHeader />
     <section className="privacy-page section">
-      <div className="eyebrow">[ Правовая информация ]</div>
+      
       <h1>ПОЛИТИКА<br/>ОБРАБОТКИ<br/>ДАННЫХ</h1>
       <div className="privacy-grid">
         <aside className="privacy-meta"><p>Дата публикации: 7 августа 2026 года</p><p>Оператор персональных данных:<br/><strong>Бушманов Илья Юрьевич</strong><br/>основатель-идеолог PLOHOSPAL Production</p><p><a href="mailto:Bimperv@yandex.ru">Bimperv@yandex.ru</a></p></aside>
