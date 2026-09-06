@@ -5,6 +5,13 @@ import Script from "next/script";
 /** Номер счётчика Яндекс.Метрики. 0 — счётчик ещё не подключён, код не рендерится. */
 export const YANDEX_METRIKA_ID = 112013260;
 
+/** Отправка цели в Метрику (цель в кабинете: тип «JavaScript-событие», идентификатор = goal). */
+export function reachGoal(goal: string) {
+  if (typeof window === "undefined") return;
+  const w = window as unknown as { ym?: (...args: unknown[]) => void };
+  w.ym?.(YANDEX_METRIKA_ID, "reachGoal", goal);
+}
+
 export function YandexMetrika() {
   if (!YANDEX_METRIKA_ID) return null;
   return (

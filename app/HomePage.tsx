@@ -4,6 +4,7 @@ import { useState, type FormEvent, type PointerEvent } from "react";
 import { ArrowIcon } from "./ArrowIcon";
 import { SiteFooter, SiteHeader } from "./SiteChrome";
 import { BackToTop } from "./BackToTop";
+import { reachGoal } from "./YandexMetrika";
 
 const tickerText = "PLOHOSPAL PRODUCTION";
 const root = "";
@@ -89,6 +90,7 @@ export default function Home() {
     const task = fields.get("task")?.toString().trim() ?? "";
     const brief = `PLOHOSPAL — новый бриф\n\nИмя: ${name}\nКонтакт: ${contact}\nРекомендованный формат: ${recommendedFormat}\nПочему: ${recommendationReason}\nЗадача: ${task}`;
     setLeadBrief(brief);
+    reachGoal("lead");
     window.open("https://t.me/bimperv", "_blank", "noopener,noreferrer");
     navigator.clipboard?.writeText(brief).catch(() => undefined);
   }

@@ -2,6 +2,7 @@
 
 import { useEffect, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowIcon } from "./ArrowIcon";
+import { reachGoal } from "./YandexMetrika";
 
 function closeMobileMenu(event: ReactMouseEvent<HTMLDivElement>) {
   if (!(event.target as HTMLElement).closest("a")) return;
@@ -54,8 +55,8 @@ export function SiteFooter() {
       <h2>ДАВАЙТЕ<br/><span>СДЕЛАЕМ</span> <ArrowIcon /></h2>
       <div className="footer-grid">
         <p>Первая консультация и персональная стратегия медиаприсутствия — бесплатно.</p>
-        <div><small>Социальные сети</small><a href="https://t.me/bimperv" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.instagram.com/bimperv" target="_blank" rel="noreferrer">Instagram</a><a href="https://vk.com/bimperv" target="_blank" rel="noreferrer">ВКонтакте</a></div>
-        <div><small>Связаться напрямую</small><a href="tel:+79026399815">+7 902 639-98-15</a><a href="mailto:Bimperv@yandex.ru">Bimperv@yandex.ru</a></div>
+        <div><small>Социальные сети</small><a href="https://t.me/bimperv" target="_blank" rel="noreferrer" onClick={() => reachGoal("contact_click")}>Telegram</a><a href="https://www.instagram.com/bimperv" target="_blank" rel="noreferrer" onClick={() => reachGoal("contact_click")}>Instagram</a><a href="https://vk.com/bimperv" target="_blank" rel="noreferrer" onClick={() => reachGoal("contact_click")}>ВКонтакте</a></div>
+        <div><small>Связаться напрямую</small><a href="tel:+79026399815" onClick={() => reachGoal("contact_click")}>+7 902 639-98-15</a><a href="mailto:Bimperv@yandex.ru" onClick={() => reachGoal("contact_click")}>Bimperv@yandex.ru</a></div>
       </div>
       <div className="copyright"><span>© PLOHOSPAL PRODUCTION, 2026</span><a href="/privacy/">Политика обработки данных</a><a href="#top">Наверх ↑</a></div>
     </footer>
