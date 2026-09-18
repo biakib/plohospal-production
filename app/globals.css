@@ -94,12 +94,11 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .service-expand a { flex:none; font-size:12px; font-weight:800; text-transform:uppercase; text-decoration:underline; text-underline-offset:6px; }
 .service-list article.is-open .service-expand { grid-template-rows:1fr; }
 .service-list article.is-open .service-expand>div { padding-top:26px; padding-bottom:36px; }
-.manifesto { display:grid; grid-template-columns:1fr 1fr; min-height:820px; padding:0; background:var(--lime); color:#000; }
-.manifesto-art { overflow:hidden; background:#bbb; }
-.manifesto-art img { filter:grayscale(1) contrast(1.2); mix-blend-mode:multiply; }
+.manifesto { display:block; background:var(--lime); color:#000; }
 .manifesto-copy { padding:100px max(40px,7vw); display:flex; flex-direction:column; }
 blockquote { margin:auto 0 60px; font-family:var(--font-display); font-weight:650; font-size:clamp(38px,4.6vw,72px); line-height:1.02; letter-spacing:-.025em; }
-.manifesto-copy p { max-width:570px; font-size:18px; line-height:1.5; }
+.manifesto-note { max-width:640px; margin:34px 0 0; font-size:18px; line-height:1.5; }
+.manifesto .dark-link { margin-top:34px; align-self:flex-start; color:#000; }
 .dark-link { margin-top:18px; align-self:flex-start; }
 .section-head { display:flex; justify-content:space-between; align-items:flex-start; }
 .section-head h2 { width:60%; }
@@ -271,8 +270,6 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .portrait { border-radius:0; }
   .numbers { grid-template-columns:1fr; }
   .numbers div { min-height:210px; }
-  .manifesto-art { min-height:600px; }
-  .manifesto-copy { min-height:650px; }
   .service-toggle { grid-template-columns:1fr 35px; padding-right:16px; }
   .service-list article:hover .service-toggle,.service-list article.is-open .service-toggle { padding-right:16px; }
   .service-toggle h3 { grid-column:1; grid-row:1; align-self:center; }
@@ -329,14 +326,13 @@ footer h2 span { color:transparent; -webkit-text-stroke:2px #000; margin-left:8v
   .lead-form { grid-template-columns:1fr; }
   .lead-form label:nth-child(3) { grid-column:auto; }
   .consent-field,.lead-form-note { grid-column:auto; }
-  .manifesto-art { min-height:420px; }
-  .manifesto-copy { min-height:570px; padding:70px 20px; }
   blockquote { font-size:48px; }
   .format-grid { grid-template-columns:1fr; }
   .format-grid article { min-height:280px; }
   .format-grid h3 { font-size:26px; }
-    .team-grid { grid-template-columns:1fr; }
-  .team-photo { height:520px; }
+    .team-grid { grid-template-columns:1fr 1fr; gap:12px; }
+  .team-photo { height:300px; }
+  .team-grid h3 { font-size:14px; margin:12px 0 3px; }
   .faq-grid { gap:20px; }
   footer { padding:70px 20px 26px; }
   /* The desktop display type is intentionally oversized; on phones it must remain readable. */

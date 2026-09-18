@@ -152,13 +152,9 @@ export default function Home() {
       </section>
 
       <section className="manifesto section">
-        <div className="manifesto-art"><img src={`${root}/assets/manifesto.webp`} alt="Креативный образ PLOHOSPAL Production" loading="lazy" decoding="async"/></div>
-        <div className="manifesto-copy">
-          
-          <blockquote>«Бренд — это то, как вас чувствуют»</blockquote>
-          <p>Мы сами — наш главный кейс. Всё, что предлагаем клиентам, делаем для себя первыми. Создаём истории, которые остаются — от поста до полнометражного кино.</p>
-          <a className="dark-link" href={`${root}/manifesto/`}>Читать манифест <ArrowIcon /></a>
-        </div>
+        <blockquote>«Бренд — это то, как вас чувствуют»</blockquote>
+        <p className="manifesto-note">Мы сами — наш главный кейс. Всё, что предлагаем клиентам, делаем для себя первыми. Создаём истории, которые остаются — от поста до полнометражного кино.</p>
+        <a className="dark-link" href={`${root}/manifesto/`}>Читать манифест <ArrowIcon /></a>
       </section>
 
       <section className="formats section" id="formats">
