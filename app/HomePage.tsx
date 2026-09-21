@@ -37,7 +37,7 @@ const team = [
   { name: "Денис Круглов", role: "Режиссёр-постановщик, оператор", image: `${root}/assets/denis-kruglov-new.webp`, links: [["ВК", "https://vk.ru/motherfackers1"], ["IG", "https://www.instagram.com/kds_video_prod"]] },
   { name: "Артур Рякин", role: "Продюсер постпродакшна", image: `${root}/assets/artur-ryakin.webp`, links: [["ВК", "https://vk.ru/honeykut"]] },
   { name: "Илья Кузьмицкий", role: "Специалист по внедрению ИИ-технологий и обучению нейросетям", image: `${root}/assets/ilya-kuzmitsky.webp`, links: [["ВК", "https://vk.ru/neuro_ilya"], ["TG", "https://t.me/Neuro_Ilya"]] },
-  { name: "Лиона Филь", role: "Руководитель направления актёрского и ораторского мастерства", image: `${root}/assets/liona-fil-portrait-v2.webp`, links: [["ВК", "https://vk.com/lionkas"], ["TG", "https://t.me/lionaelle"], ["IG", "https://www.instagram.com/lionaelle"]] },
+  { name: "Лиона Филь", role: "Руководитель направления: актёрское и ораторское мастерство", image: `${root}/assets/liona-fil-portrait-v2.webp`, links: [["ВК", "https://vk.com/lionkas"], ["TG", "https://t.me/lionaelle"], ["IG", "https://www.instagram.com/lionaelle"]] },
   { name: "Юлия Гирш", role: "Специалист по AI и SMM", image: `${root}/assets/yulia-girsh-new.webp`, links: [["ВК", "https://vk.com/id138925509"], ["TG", "https://t.me/@girshjuli"], ["IG", "https://www.instagram.com/juli_girsh"]] },
 ];
 
