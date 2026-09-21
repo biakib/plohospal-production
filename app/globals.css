@@ -71,7 +71,7 @@ nav a:hover,.nav-cta:hover { color:var(--lime); }
 .intro-copy ul { list-style:none; padding:0; margin:36px 0 0; border-top:1px solid #aaa; }
 .intro-copy li { padding:14px 0; border-bottom:1px solid #aaa; text-transform:uppercase; font-size:11px; letter-spacing:.08em; }
 .numbers { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; padding:0; background:#333; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.numbers div { background:#f5f4f0; color:#090909; padding:70px 6vw; min-height:280px; display:flex; flex-direction:column; justify-content:space-between; transition:background .25s ease,transform .25s ease; }
+.numbers div { background:#f5f4f0; color:#090909; padding:48px 4vw; min-height:240px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:14px; transition:background .25s ease,transform .25s ease; }
 .numbers div:hover { background:var(--lime); transform:translateY(-5px); }
 .numbers strong { font-family:var(--font-display); font-size:clamp(70px,9vw,136px); font-weight:650; letter-spacing:-.065em; line-height:.82; }
 .numbers span { color:#4e4e4e; font-size:14px; text-transform:uppercase; line-height:1.4; }
