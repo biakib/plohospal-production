@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 
 export const dynamic = "force-static";
 
-const title = "PLOHOSPAL PRODUCTION — медиа-агентство нового поколения";
+const title = "PLOHOSPAL PRODUCTION — медиапродакшн полного цикла";
 const description = "Стратегия, контент, продвижение и AI-продакшн для брендов, которые невозможно игнорировать.";
 
 export const metadata: Metadata = {
