@@ -44,7 +44,7 @@ const organizationJsonLd = {
   name: "PLOHOSPAL PRODUCTION",
   url: "https://plohospal.ru",
   logo: "https://plohospal.ru/icon-512.png",
-  description: "Медиа-агентство полного цикла: упаковка бренда, стратегия и маркетинг, SMM, продакшн, AI-контент, внедрение и обучение ИИ.",
+  description: "Медиапродакшн полного цикла: упаковка бренда, стратегия и маркетинг, SMM, продакшн, AI-контент, внедрение и обучение ИИ.",
   email: "Bimperv@yandex.ru",
   telephone: "+7 902 639-98-15",
   founder: { "@type": "Person", name: "Илья Бушманов", jobTitle: "Основатель, медиапродюсер" },
