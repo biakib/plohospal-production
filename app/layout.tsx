@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
-  openGraph: { title, description, type: "website", locale: "ru_RU", images: [{ url: "/og.png", width: 1200, height: 630, alt: "PLOHOSPAL PRODUCTION" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  openGraph: { title, description, type: "website", locale: "ru_RU", images: [{ url: "/og.jpg", width: 1024, height: 1024, alt: "PLOHOSPAL PRODUCTION" }] },
+  twitter: { card: "summary_large_image", title, description, images: ["/og.jpg"] },
 };
 
 const organizationJsonLd = {
