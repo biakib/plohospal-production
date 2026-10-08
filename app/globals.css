@@ -424,5 +424,5 @@ nav a:focus-visible,.nav-cta:focus-visible,.desktop-more-trigger:focus-visible,.
 .lead-form-alt a:hover { color:var(--lime); }
 
 /* Match Ivan’s portrait scale to the other team members. */
-.team-photo img[alt="Иван Егоров"] { transform:scale(1.4); transform-origin:center; }
-.team-grid article:hover .team-photo img[alt="Иван Егоров"] { transform:scale(1.435); }
+.team-photo img[alt="Иван Егоров"] { transform:scale(1.2); transform-origin:center; }
+.team-grid article:hover .team-photo img[alt="Иван Егоров"] { transform:scale(1.23); }
